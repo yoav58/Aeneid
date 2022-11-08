@@ -8,22 +8,22 @@ namespace States
         protected Agent agent;
         public UnityEvent OnEnter, OnExit; // probally when enter the state we got a lot of things to do
 
-    
-     /**********************************************************************
-     * Method Name: initializeState
-     * description: initialize the state to the currect agent.
-     ***********************************************************************/
+
+        /**********************************************************************
+        * Method Name: initializeState
+        * description: initialize the state to the currect agent.
+        ***********************************************************************/
         public void initializeState(Agent a)
         {
             agent = a;
         }
 
 
-     /**********************************************************************
-     * Method Name: Enter
-     * description: when we enter the state, do all the functionality we want to do.
-     * and invoke all the method of our enter event.
-     ***********************************************************************/
+        /**********************************************************************
+        * Method Name: Enter
+        * description: when we enter the state, do all the functionality we want to do.
+        * and invoke all the method of our enter event.
+        ***********************************************************************/
         public void Enter()
         {
             agent.agentInput.OnMovment += handleMovement;
@@ -31,18 +31,18 @@ namespace States
             EnterState();
 
         }
-     /**********************************************************************
-     * Method Name: EnterState 
-     * description: what the class will actually do when he became active.
-     ***********************************************************************/
+        /**********************************************************************
+        * Method Name: EnterState 
+        * description: what the class will actually do when he became active.
+        ***********************************************************************/
         protected abstract void EnterState();
 
 
-     /**********************************************************************
-     * Method Name: handleMovement 
-     * description: will function as used by the agent when movment is happaned.
-     ***********************************************************************/
-        protected abstract void handleMovement(Vector2 o);
+        /**********************************************************************
+        * Method Name: handleMovement 
+        * description: will function as used by the agent when movment is happaned.
+        ***********************************************************************/
+        protected virtual void handleMovement(Vector2 o) { }
 
 
     /**********************************************************************

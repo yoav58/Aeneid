@@ -5,9 +5,11 @@ namespace States
 {
     public class WalkState : State
     {
-        public State idleState;
+        public State idleState,runState;
         public MovmentData movmentData; // this file for public acess to movment data
-        public float acceleration, maxSpeed, deacceleration; 
+        public float acceleration, maxSpeed, deacceleration;
+        private int buttonCount;
+        public float  buttonCooler;
 
         private void Awake()
         {
@@ -23,17 +25,16 @@ namespace States
             movmentData.currentVelocity = Vector2.zero;
         }
 
-        protected override void handleMovement(Vector2 o)
-        {
-            throw new System.NotImplementedException();
-        }
 
         public  override void stateUpdate()
         {
+            // check if the player is runing.
+            if (agent.helper.isRun(agent.rb2d)) agent.transitionToOtherState(runState, this);
             base.stateUpdate();
             CalcualateVelocity(); // first we calculate the player velocity it should have 
             SetPlayerVelocity(); // set the velocity we calculated
             if (agent.isStading()) agent.transitionToOtherState(idleState, this);
+
         } 
  /**********************************************************************
  * Method Name: calcualateVelocity
@@ -41,26 +42,26 @@ namespace States
  ***********************************************************************/
         private void CalcualateVelocity()
         {
-            CalculateSpeet(agent.agentInput.MovmentVector, movmentData);
+            CalculateSpeed(agent.agentInput.MovmentVector, movmentData);
             CalculateHorizontalDirection(movmentData);
             movmentData.currentVelocity = Vector3.right * movmentData.horizontalMovmentDirection * movmentData.currentSpeed;
             movmentData.currentVelocity.y = agent.rb2d.velocity.y;
         }
  /**********************************************************************
- * Method Name: calculateSpeet
+ * Method Name: calculateSpeed
  * description: ctrate effect of accelartion, if the player start the run/stop
  * the speed while increase/decrease by the accleration/deccleration.
  ***********************************************************************/
-        private void CalculateSpeet(Vector2 agentMovment, MovmentData movementData)
+        private void CalculateSpeed(Vector2 agentMovment, MovmentData movementData)
         {
             if (Mathf.Abs(agentMovment.x) > 0)
             {
-                movementData.currentSpeed += acceleration * Time.deltaTime;
+                movementData.currentSpeed += maxSpeed;//acceleration * Time.deltaTime;
             
             }
             else
             {
-                movementData.currentSpeed -= deacceleration * Time.deltaTime;
+                movementData.currentSpeed = 0;//deacceleration * Time.deltaTime;
             }
 
             movementData.currentSpeed = Math.Clamp(movementData.currentSpeed, 0, maxSpeed);

@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     // we want to pass method to each Event.
     public event Action OnAttack, OnJumpPresset, OnJumpReleased, OnWeaponChange;
     // when move
-    public event Action<Vector2> OnMovment;
+    public event Action<Vector2> OnMovment,OnRunning;
     // assign the controllers
     public KeyCode jumpKey, attacKey, menuKey,swapSkill;
     public UnityEvent OnMenuKeyPressed;

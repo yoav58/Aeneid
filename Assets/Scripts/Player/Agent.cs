@@ -15,6 +15,10 @@ public class Agent : MonoBehaviour
     public State currentState = null;
     public State previusState = null;
     public State[] states;
+    // to see if the player dasing
+    public HelperStateCheck helper;
+
+
     private void Awake()
     {
         agentInput = GetComponentInParent<PlayerInput>();
@@ -48,6 +52,7 @@ public class Agent : MonoBehaviour
         }
         return false;
     }
+
 
     /******************************************************************
     * Function Name: transitionToOtherState
