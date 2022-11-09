@@ -8,6 +8,7 @@ namespace States
         public State idleState,runState;
         public MovmentData movmentData; // this file for public acess to movment data
         public float acceleration, maxSpeed, deacceleration;
+        public float walkspeed;
         private int buttonCount;
         public float  buttonCooler;
 
@@ -28,7 +29,7 @@ namespace States
 
         public  override void stateUpdate()
         {
-            // check if the player is runing.
+            // check if the player is runing, if so then transfar to run state.
             if (agent.helper.isRun(agent.rb2d)) agent.transitionToOtherState(runState, this);
             base.stateUpdate();
             CalcualateVelocity(); // first we calculate the player velocity it should have 
@@ -56,7 +57,7 @@ namespace States
         {
             if (Mathf.Abs(agentMovment.x) > 0)
             {
-                movementData.currentSpeed += maxSpeed;//acceleration * Time.deltaTime;
+                movementData.currentSpeed = walkspeed;//acceleration * Time.deltaTime;
             
             }
             else
