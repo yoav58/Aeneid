@@ -17,6 +17,7 @@ public class Agent : MonoBehaviour
     public State[] states;
     // to see if the player dasing
     public HelperStateCheck helper;
+    public GroundDetector groundDetector;
 
 
     private void Awake()
@@ -26,6 +27,7 @@ public class Agent : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         agentAnimation = GetComponentInChildren<AgentAnimation>();
         agentRender = GetComponentInChildren<AgentRender>();
+        groundDetector = GetComponentInChildren<GroundDetector>();
         states = GetComponentsInChildren<State>();
         foreach(State s in states)
         {
@@ -72,10 +74,12 @@ public class Agent : MonoBehaviour
 
     private void Update()
     {
+     
         currentState.stateUpdate();
     }
     private void FixedUpdate()
     {
+        groundDetector.CheckIfGrounded();
         currentState.stateFixedUpdated();
     }
 }

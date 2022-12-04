@@ -5,6 +5,10 @@ namespace States
 {
     public abstract class State : MonoBehaviour
     {
+        [SerializeField]
+        protected State jumpState;
+        [SerializeField]
+        protected State FallState;
         protected Agent agent;
         public UnityEvent OnEnter, OnExit; // probally when enter the state we got a lot of things to do
 
@@ -27,6 +31,8 @@ namespace States
         public void Enter()
         {
             agent.agentInput.OnMovment += handleMovement;
+            agent.agentInput.OnJumpPresset += handleJump;
+            agent.agentInput.OnJumpReleased += handleStopJump;
             OnEnter?.Invoke();
             EnterState();
 
@@ -45,15 +51,42 @@ namespace States
         protected virtual void handleMovement(Vector2 o) { }
 
 
+
+
+        protected virtual void handleJump()
+        {
+            testJumpTrans();
+
+        }
+
+        private void testJumpTrans()
+        {
+            if (agent.groundDetector.isGrounded)
+            {
+                agent.transitionToOtherState(jumpState, this);
+            }
+        }
+
+        protected virtual void handleStopJump() { }
+
     /**********************************************************************
     * Method Name: stateUpdate 
     * description: will function as MonoBehaviour.Update.
     ***********************************************************************/
         public virtual void stateUpdate()
         {
+            testFallTrans();
         }
 
-
+        protected virtual bool testFallTrans()
+        {
+            if(agent.groundDetector.isGrounded == false)
+            {
+                agent.transitionToOtherState(FallState, this);
+                return true;
+            }
+            return false;
+        }
      /**********************************************************************
      * Method Name: stateFixedUpdated
      * description: will function as MonoBehaviour.FixedUpdate.

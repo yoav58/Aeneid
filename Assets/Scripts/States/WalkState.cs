@@ -15,6 +15,7 @@ namespace States
         private void Awake()
         {
             movmentData = GetComponentInParent<MovmentData>();
+            walkspeed = 5;
         }
 
         protected override void EnterState()
@@ -31,7 +32,7 @@ namespace States
         {
             // check if the player is runing, if so then transfar to run state.
             if (agent.helper.isRun(agent.rb2d)) agent.transitionToOtherState(runState, this);
-            base.stateUpdate();
+            if (testFallTrans()) return; //base.stateUpdate();
             CalcualateVelocity(); // first we calculate the player velocity it should have 
             SetPlayerVelocity(); // set the velocity we calculated
             if (agent.isStading()) agent.transitionToOtherState(idleState, this);
@@ -41,7 +42,7 @@ namespace States
  * Method Name: calcualateVelocity
  * description: here we calcula
  ***********************************************************************/
-        private void CalcualateVelocity()
+        protected void CalcualateVelocity()
         {
             CalculateSpeed(agent.agentInput.MovmentVector, movmentData);
             CalculateHorizontalDirection(movmentData);
@@ -53,7 +54,7 @@ namespace States
  * description: ctrate effect of accelartion, if the player start the run/stop
  * the speed while increase/decrease by the accleration/deccleration.
  ***********************************************************************/
-        private void CalculateSpeed(Vector2 agentMovment, MovmentData movementData)
+        protected void CalculateSpeed(Vector2 agentMovment, MovmentData movementData)
         {
             if (Mathf.Abs(agentMovment.x) > 0)
             {
@@ -82,7 +83,7 @@ namespace States
     * Method Name: setPlayerVelocity
     * description: set the agent velocity to the movmentData fields.
     ***********************************************************************/
-        private void SetPlayerVelocity()
+        protected void SetPlayerVelocity()
         {
             agent.rb2d.velocity = movmentData.currentVelocity;
         }

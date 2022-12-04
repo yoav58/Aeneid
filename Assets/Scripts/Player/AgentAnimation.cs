@@ -37,6 +37,12 @@ public class AgentAnimation : MonoBehaviour
             case AnimationType.Run:
                 changeAnimation("Run");
                 break;
+            case AnimationType.Jump:
+                changeAnimation("Jump");
+                break;
+            case AnimationType.Fall:
+                changeAnimation("Fall");
+                break;
             default:
                 break;
         }
@@ -51,5 +57,7 @@ public enum AnimationType
 {
     Idle,
     Walk,
-    Run
+    Run,
+    Jump,
+    Fall
 }
