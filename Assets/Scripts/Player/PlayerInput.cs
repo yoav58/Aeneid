@@ -10,10 +10,13 @@ public class PlayerInput : MonoBehaviour
     public Vector2 MovmentVector  { get; private set;}
     // we want to pass method to each Event.
     public event Action OnAttack, OnJumpPresset, OnJumpReleased, OnWeaponChange;
+    // i prefered that skills will be in delegate and not event.
+    public delegate void SkillDelegate();
+    public SkillDelegate OnFirstSkillCast;
     // when move
     public event Action<Vector2> OnMovment,OnRunning;
     // assign the controllers
-    public KeyCode jumpKey, attacKey, menuKey,swapSkill;
+    public KeyCode jumpKey, attacKey, menuKey,swapSkill, firstSkill;
     public UnityEvent OnMenuKeyPressed;
 
 
@@ -74,6 +77,14 @@ public class PlayerInput : MonoBehaviour
     {
         MovmentVector = getMovmentVector();
         OnMovment?.Invoke(MovmentVector);
+    }
+
+    private void getFirstSkillInput()
+    {
+        if (Input.GetKeyDown(firstSkill))
+        {
+            OnFirstSkillCast?.Invoke();
+        }
     }
 
     private Vector2 getMovmentVector()

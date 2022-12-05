@@ -43,6 +43,9 @@ public class AgentAnimation : MonoBehaviour
             case AnimationType.Fall:
                 changeAnimation("Fall");
                 break;
+            case AnimationType.FirstSkill:
+                changeAnimation("castingSkill1");
+                break;
             default:
                 break;
         }
@@ -59,5 +62,6 @@ public enum AnimationType
     Walk,
     Run,
     Jump,
-    Fall
+    Fall,
+    FirstSkill
 }
