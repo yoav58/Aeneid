@@ -16,11 +16,13 @@ namespace States
         {
             movmentData = GetComponentInParent<MovmentData>();
             walkspeed = 5;
+            stateName = "Walk";
         }
 
         protected override void EnterState()
         {
-            agent.agentAnimation.playAnimation(AnimationType.Walk);
+
+             agent.agentAnimation.playAnimation(AnimationType.Walk);
             // promise us that we start from idle
             movmentData.horizontalMovmentDirection = 0;
             movmentData.currentSpeed = 0;
@@ -87,7 +89,12 @@ namespace States
         {
             agent.rb2d.velocity = movmentData.currentVelocity;
         }
-    
+
+        protected override void ExitState()
+        {
+            agent.rb2d.velocity = new Vector3(0, 0, 0);
+        }
+
 
     }
 }

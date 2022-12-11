@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class GroundDetector : MonoBehaviour
 {
-    public Collider2D agentCollider;
-    public LayerMask groundMask;
-    public bool isGrounded;
+    public Collider2D agentCollider; // the collider of the player
+    public LayerMask groundMask; // 
+    public bool isGrounded; // we need to know if we Grounded
 
 
+    // those fields is to easy resize the boxCollider(Ground) of the character
     [Header("Game")]
     [Range(-2f, 2f)]
     public float boxCastYoffset = -0.1f;
@@ -35,6 +36,11 @@ public class GroundDetector : MonoBehaviour
         }
     }
 
+
+    /******************************************************************
+    * Function Name: OnDrawGizmos
+    *Description: simply draw Gizmo (for debug)
+    *****************************************************************/
     private void OnDrawGizmos()
     {
         Gizmos.color = gizmoColorNotCollide;
@@ -44,7 +50,10 @@ public class GroundDetector : MonoBehaviour
         Gizmos.DrawWireCube(center, size);
     }
 
-
+    /******************************************************************
+   * Function Name: CheckIfGrounded
+   *Description: This method check if the player is touch the ground
+   *****************************************************************/
     public void CheckIfGrounded()
     {
 

@@ -7,17 +7,19 @@ using UnityEngine.Events;
 public class PlayerInput : MonoBehaviour
 {
     [field:SerializeField]
+    public AgentAnimation agentAnimation;
     public Vector2 MovmentVector  { get; private set;}
     // we want to pass method to each Event.
     public event Action OnAttack, OnJumpPresset, OnJumpReleased, OnWeaponChange;
     // i prefered that skills will be in delegate and not event.
     public delegate void SkillDelegate();
-    public SkillDelegate OnFirstSkillCast;
+    public SkillDelegate onSkillCast;
     // when move
     public event Action<Vector2> OnMovment,OnRunning;
     // assign the controllers
     public KeyCode jumpKey, attacKey, menuKey,swapSkill, firstSkill;
     public UnityEvent OnMenuKeyPressed;
+    public bool doSkill = true;
 
 
     private void Update()
@@ -28,6 +30,7 @@ public class PlayerInput : MonoBehaviour
             getJumptInput();
             getAttackInput();
             getWeaponSwapInput();
+            getFirstSkillInput();
         }
         getMenuInput();
        
@@ -56,7 +59,8 @@ public class PlayerInput : MonoBehaviour
     private void getMenuInput()
     {
         if (Input.GetKeyDown(menuKey))
-        {
+            if (!agentAnimation.doingSkill())
+            {
             OnMenuKeyPressed?.Invoke();
         }
     }
@@ -64,26 +68,29 @@ public class PlayerInput : MonoBehaviour
     private void getJumptInput()
     {
         if (Input.GetKeyDown(jumpKey))
-        {
+            if (!agentAnimation.doingSkill())
+            {
             OnJumpPresset?.Invoke();
         }
         if (Input.GetKeyUp(jumpKey))
-        {
+            if (!agentAnimation.doingSkill())
+            {
             OnJumpReleased?.Invoke();
         }
     }
 
     private void getMovmentInput()
     {
-        MovmentVector = getMovmentVector();
-        OnMovment?.Invoke(MovmentVector);
+            MovmentVector = getMovmentVector();
+            OnMovment?.Invoke(MovmentVector);
     }
 
     private void getFirstSkillInput()
     {
         if (Input.GetKeyDown(firstSkill))
+            if(!agentAnimation.doingSkill())
         {
-            OnFirstSkillCast?.Invoke();
+                onSkillCast?.Invoke();
         }
     }
 
@@ -91,4 +98,9 @@ public class PlayerInput : MonoBehaviour
     {
         return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
+
+
+
+
+
 }

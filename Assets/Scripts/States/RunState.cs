@@ -31,7 +31,7 @@ public class RunState : State
     }
     /**********************************************************************
     * Method Name: calcualateVelocity
-    * description: here we calcula
+    * description: here we calculate the valocity
     ***********************************************************************/
     private void CalcualateVelocity()
     {

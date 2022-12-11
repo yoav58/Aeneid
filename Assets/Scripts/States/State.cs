@@ -5,12 +5,16 @@ namespace States
 {
     public abstract class State : MonoBehaviour
     {
+        public string stateName;
         [SerializeField]
         protected State jumpState;
         [SerializeField]
         protected State FallState;
+        [SerializeField]
+        protected State skillState;
         protected Agent agent;
-        public UnityEvent OnEnter, OnExit; // probally when enter the state we got a lot of things to do
+        public UnityEvent OnEnter, OnExit;
+        // probally when enter the state we got a lot of things to do
 
 
         /**********************************************************************
@@ -33,6 +37,7 @@ namespace States
             agent.agentInput.OnMovment += handleMovement;
             agent.agentInput.OnJumpPresset += handleJump;
             agent.agentInput.OnJumpReleased += handleStopJump;
+            agent.agentInput.onSkillCast = handleSkill;
             OnEnter?.Invoke();
             EnterState();
 
@@ -68,6 +73,11 @@ namespace States
         }
 
         protected virtual void handleStopJump() { }
+
+        private  void handleSkill()
+        {
+            agent.transitionToOtherState(skillState, this);
+        }
 
     /**********************************************************************
     * Method Name: stateUpdate 

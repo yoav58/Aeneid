@@ -18,6 +18,7 @@ public class Agent : MonoBehaviour
     // to see if the player dasing
     public HelperStateCheck helper;
     public GroundDetector groundDetector;
+    //public SkillsManager skillManager;
 
 
     private void Awake()
@@ -33,6 +34,7 @@ public class Agent : MonoBehaviour
         {
             s.initializeState(this);
         }
+        //skillManager.setAgent(this);
     }
     private void Start()
     {
@@ -82,4 +84,5 @@ public class Agent : MonoBehaviour
         groundDetector.CheckIfGrounded();
         currentState.stateFixedUpdated();
     }
+
 }

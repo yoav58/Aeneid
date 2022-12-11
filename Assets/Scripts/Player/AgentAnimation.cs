@@ -5,6 +5,7 @@ using UnityEngine;
 public class AgentAnimation : MonoBehaviour
 {
     private Animator animator;
+    bool DoingSkill = false;
 
     private void Awake()
     {
@@ -43,16 +44,30 @@ public class AgentAnimation : MonoBehaviour
             case AnimationType.Fall:
                 changeAnimation("Fall");
                 break;
-            case AnimationType.FirstSkill:
-                changeAnimation("castingSkill1");
+            case AnimationType.FireBall:
+                changeAnimation("FireBallSkill");
                 break;
             default:
                 break;
         }
     }
 
-}
+    public void doSkillTrue()
+    {
+        DoingSkill = true;
+    }
 
+    public void doSkillFalse()
+    {
+        DoingSkill = false;
+    }
+
+    public bool doingSkill()
+    {
+        return this.DoingSkill;
+    }
+
+}
 
 
 
@@ -63,5 +78,5 @@ public enum AnimationType
     Run,
     Jump,
     Fall,
-    FirstSkill
+    FireBall
 }

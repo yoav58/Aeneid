@@ -7,6 +7,7 @@ public class JumpState : WalkState
 {
     [Range(0, 20)]
     public float JumpForce = 12f;
+    [Range(0, 20)]
     public float jumperPhysicsForce = 2;
     private bool Jumping;
     protected override void EnterState()
@@ -26,7 +27,10 @@ public class JumpState : WalkState
     {
         Jumping = false;
     }
-
+    /**********************************************************************
+   * Method Name: stateUpdate
+   * description: here we calcula
+   ***********************************************************************/
     public override void stateUpdate()
     {
         JumpHeight();
@@ -37,7 +41,10 @@ public class JumpState : WalkState
             agent.transitionToOtherState(FallState, this);
         }
     }
-
+    /**********************************************************************
+    * Method Name: JumpHeight
+    * description: if we stop jump we want to fall faster.
+    ***********************************************************************/
     private void JumpHeight()
     {
         if(Jumping == false)

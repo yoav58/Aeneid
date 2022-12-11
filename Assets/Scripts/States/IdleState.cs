@@ -7,7 +7,9 @@ namespace States
         public State walkState,runState;
         protected override void EnterState()
         {
-            agent.agentAnimation.playAnimation(AnimationType.Idle); // play idleAnimation
+
+            agent.agentAnimation.playAnimation(AnimationType.Idle);
+            // play idleAnimation
         }
         public override void stateUpdate()
         {
@@ -20,7 +22,7 @@ namespace States
         protected override void handleMovement(Vector2 input)
         {
             // when the user pressed right or left key, transition to walk.
-            if (Mathf.Abs(input.x) > 0)
+            if (Mathf.Abs(input.x) > 0.1f)
             {
                 agent.transitionToOtherState(walkState, this);
             }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Skills : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Agent agent;
+    public int SkillNumber;
+
+    public void setAgent(Agent a)
     {
-        
+        this.agent = a;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    public virtual void skillAction() { }
+
 }
