@@ -9,6 +9,7 @@ public class FireBall : MonoBehaviour
     public Agent agent;
     public Transform place;
     private Rigidbody2D rigidBody;
+    private Collider2D coll;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class FireBall : MonoBehaviour
         place = GetComponent<Transform>();
         agent = GameObject.Find("Agent").GetComponent<Agent>();
         rigidBody = GetComponent<Rigidbody2D>();
+        coll = GetComponent<Collider2D>();
 
 
     }
@@ -36,5 +38,24 @@ public class FireBall : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        rigidBody.velocity = new Vector3(0, rigidBody.position.y, 0);
+        animator.Play("HitExplosion", -1, 0);
+        if(collision.tag == "Enemy") 
+        {
+            Monster_First m = collision.gameObject.GetComponent<Monster_First>();
+            m.getDamage();
+        }
+
+        Destroy(coll);
+    }
+
+    public void killObject()
+    {
+        Destroy(gameObject);
     }
 }

@@ -52,6 +52,8 @@ public class AgentAnimation : MonoBehaviour
         }
     }
 
+
+    // for animation Events
     public void doSkillTrue()
     {
         DoingSkill = true;
