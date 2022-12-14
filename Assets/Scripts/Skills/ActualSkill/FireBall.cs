@@ -51,6 +51,7 @@ public class FireBall : MonoBehaviour
             m.getDamage();
         }
 
+        // it take time to Destroy object so Destroy the collider First.
         Destroy(coll);
     }
 

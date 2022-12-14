@@ -15,9 +15,7 @@ public class FireBallSKill : Skills
    *****************************************************************/
     public override void skillAction()
     {
-        Debug.Log("shoot");
         agent.agentAnimation.playAnimation(AnimationType.FireBall);
-        Debug.Log(fireBallPlace.rotation);
         Instantiate(projectile, fireBallPlace.position,fireBallPlace.rotation);
     }
 

@@ -937,6 +937,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae74bf173a4f4f81b0468349e7ebad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &394870753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394870746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8239761a6cfbd488984f8485f2dbf7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 2.04
+  range: 1.3
+  damage: 0
+  colliderDistance: -5
+  boxCollider: {fileID: 394870747}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &401593081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,6 +5311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950024596}
   - component: {fileID: 1950024597}
+  - component: {fileID: 1950024598}
   m_Layer: 0
   m_Name: HP
   m_TagString: Untagged
@@ -5366,6 +5387,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1950024598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950024595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728afccb3444f4df6b5679e6d6a6e8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004444011
 GameObject:
   m_ObjectHideFlags: 0
