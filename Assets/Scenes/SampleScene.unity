@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 8611313}
   - component: {fileID: 8611314}
   - component: {fileID: 8611315}
+  - component: {fileID: 8611316}
   m_Layer: 0
   m_Name: Agent
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,6 +220,21 @@ MonoBehaviour:
   horizontalMovmentDirection: 0
   currentSpeed: 0
   currentVelocity: {x: 0, y: 0}
+--- !u!114 &8611316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189fce7ae27984b95b57af62dcdaf8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1043196121}
+  agent: {fileID: 8611314}
+  damageState: {fileID: 1031724310}
 --- !u!1 &29743588
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +740,7 @@ GameObject:
   - component: {fileID: 363786431}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,13 +966,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 2.04
-  range: 1.3
-  damage: 0
+  range: 0.8
+  damage: 3
   colliderDistance: -5
   boxCollider: {fileID: 394870747}
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
+  healthManager: {fileID: 8611316}
+  isHit: 0
 --- !u!1 &401593081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,6 +1771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a28e28767a9c445eb5867afef0cbc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageState: {fileID: 1031724310}
 --- !u!114 &694194754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3269,6 +3288,7 @@ GameObject:
   - component: {fileID: 1031724307}
   - component: {fileID: 1031724308}
   - component: {fileID: 1031724309}
+  - component: {fileID: 1031724310}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -3471,6 +3491,31 @@ MonoBehaviour:
       m_Calls: []
   idleState: {fileID: 1031724303}
   skillManager: {fileID: 1940470592}
+--- !u!114 &1031724310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031724301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062f2eaf262b94e61b54d1158efa7837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateName: 
+  jumpState: {fileID: 0}
+  FallState: {fileID: 0}
+  skillState: {fileID: 0}
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  health: {fileID: 8611316}
+  idle: {fileID: 1031724303}
+  playerSprite: {fileID: 694194751}
 --- !u!1 &1043196119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,7 +3738,7 @@ GameObject:
   - component: {fileID: 1149161298}
   m_Layer: 0
   m_Name: GroundColider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

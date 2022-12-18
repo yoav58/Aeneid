@@ -17,8 +17,9 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    public  HealthManager healthManager; // the player healthManager;
     private Animator anim;
-
+    public bool isHit = false;
 
     private void Awake()
     {
@@ -39,11 +40,7 @@ public class EnemyAttack : MonoBehaviour
         //Attack only when player in sight?
         if (PlayerInSight())
         {
-            if (cooldownTimer >= attackCooldown)
-            {
-                cooldownTimer = 0;
-                anim.Play("attack_02",-1,0);
-            }
+            attack();
         }
     }
 
@@ -65,4 +62,24 @@ public class EnemyAttack : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
+
+    private void attack()
+    {
+        if (cooldownTimer >= attackCooldown)
+        {
+            cooldownTimer = 0;
+            anim.Play("attack_02", -1, 0);
+        }
+    }
+
+
+    private void damagePlayer()
+    {
+        if (PlayerInSight())
+        {
+            healthManager.reduceHealth(damage);
+        }
+    }
+
+
 }

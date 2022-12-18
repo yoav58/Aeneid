@@ -6,7 +6,7 @@ public class FireBallSKill : Skills
 {
     public Transform fireBallPlace;
     public GameObject projectile;
-
+    
 
     /******************************************************************
    * Function Name: skillAction

@@ -6,7 +6,7 @@ public class AgentAnimation : MonoBehaviour
 {
     private Animator animator;
     bool DoingSkill = false;
-
+    public States.DamageState damageState;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -47,6 +47,9 @@ public class AgentAnimation : MonoBehaviour
             case AnimationType.FireBall:
                 changeAnimation("FireBallSkill");
                 break;
+            case AnimationType.Damage:
+                changeAnimation("damage");
+                break;
             default:
                 break;
         }
@@ -69,6 +72,12 @@ public class AgentAnimation : MonoBehaviour
         return this.DoingSkill;
     }
 
+    public void stopDamage()
+    {
+        damageState.stopGetDamage();
+    }
+
+
 }
 
 
@@ -80,5 +89,6 @@ public enum AnimationType
     Run,
     Jump,
     Fall,
-    FireBall
+    FireBall,
+    Damage
 }
