@@ -6,6 +6,8 @@ public class Monster_First : MonoBehaviour , Enemy
 {
     private Animator animator;
     private EnemyLifeBar lifeBar;
+    public GameObject b;
+    public Transform placeCoin;
 
 
 
@@ -32,6 +34,13 @@ public class Monster_First : MonoBehaviour , Enemy
     void Update()
     {
 
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("hi");
+
+        Instantiate(b, placeCoin.position,placeCoin.rotation);
     }
 
 }
