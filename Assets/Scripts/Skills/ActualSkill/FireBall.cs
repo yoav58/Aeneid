@@ -10,6 +10,7 @@ public class FireBall : MonoBehaviour
     public Transform place;
     private Rigidbody2D rigidBody;
     private Collider2D coll;
+    public float damage;
 
     private void Awake()
     {
@@ -42,15 +43,14 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (collision.tag == "Item") return;
         rigidBody.velocity = new Vector3(0, rigidBody.position.y, 0);
         animator.Play("HitExplosion", -1, 0);
         if(collision.tag == "Enemy") 
         {
             Monster_First m = collision.gameObject.GetComponent<Monster_First>();
-            m.getDamage();
+            m.getDamage(damage);
         }
-
         // it take time to Destroy object so Destroy the collider First.
         Destroy(coll);
     }

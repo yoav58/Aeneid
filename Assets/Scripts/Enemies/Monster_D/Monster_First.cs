@@ -8,13 +8,14 @@ public class Monster_First : MonoBehaviour , Enemy
     private EnemyLifeBar lifeBar;
     public GameObject b;
     public Transform placeCoin;
+    public ExpManager playerXP;
+    public float xpReward;
 
 
-
-    public void getDamage()
+    public void getDamage(float damage)
     {
         animator.Play("demage", -1, 0f);
-        lifeBar.reduceLife(0.4f);
+        lifeBar.reduceLife(damage);
     }
 
     private void Awake()
@@ -38,8 +39,7 @@ public class Monster_First : MonoBehaviour , Enemy
 
     private void OnDestroy()
     {
-        Debug.Log("hi");
-
+        playerXP.addXP(xpReward);
         Instantiate(b, placeCoin.position,placeCoin.rotation);
     }
 

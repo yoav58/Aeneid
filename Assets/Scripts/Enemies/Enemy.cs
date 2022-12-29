@@ -5,7 +5,7 @@ using UnityEngine;
 public interface Enemy
 {
 
-    public void getDamage();
+    public void getDamage(float damage);
     
 
 }

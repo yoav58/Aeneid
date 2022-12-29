@@ -139,6 +139,7 @@ MonoBehaviour:
   speed: 6
   agent: {fileID: 0}
   place: {fileID: 7774125626369245249}
+  damage: 2.1
 --- !u!50 &7885110637675048215
 Rigidbody2D:
   serializedVersion: 4
