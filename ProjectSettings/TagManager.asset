@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Item
   - Bound
+  - Wall
+  - Ground
+  - SpaceShip
   layers:
   - Default
   - TransparentFX

@@ -39,8 +39,12 @@ public class Monster_First : MonoBehaviour , Enemy
 
     private void OnDestroy()
     {
-        playerXP.addXP(xpReward);
-        Instantiate(b, placeCoin.position,placeCoin.rotation);
+;
     }
 
+    public void killMonster()
+    {
+        playerXP.addXP(xpReward);
+        Instantiate(b, placeCoin.position, placeCoin.rotation);
+    }
 }
