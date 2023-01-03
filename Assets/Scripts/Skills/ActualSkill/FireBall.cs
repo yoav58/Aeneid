@@ -43,7 +43,7 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Item") return;
+        if (collision.tag == "Item" || collision.tag == "Bound") return;
         rigidBody.velocity = new Vector3(0, rigidBody.position.y, 0);
         animator.Play("HitExplosion", -1, 0);
         if(collision.tag == "Enemy") 

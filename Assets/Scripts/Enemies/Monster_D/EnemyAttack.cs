@@ -43,7 +43,11 @@ public class EnemyAttack : MonoBehaviour
             attack();
         }
     }
-
+    /******************************************************************
+    * Function Name: PlayerInSight
+    *Description: this function check if ther player is close to the enemy.
+    *return yes if so.
+    *****************************************************************/
     private bool PlayerInSight()
     {
         RaycastHit2D hit =
@@ -52,9 +56,9 @@ public class EnemyAttack : MonoBehaviour
             0, Vector2.left, 0, playerLayer);
 
         //if (hit.collider != null)
-          //  playerHealth = hit.transform.GetComponent<Health>();
-
-        return hit.collider != null;
+        //  playerHealth = hit.transform.GetComponent<Health>();
+        if (hit.collider != null && hit.collider.tag == "Player") return true;
+        return false;    //return hit.collider.tag != null;
     }
     private void OnDrawGizmos()
     {

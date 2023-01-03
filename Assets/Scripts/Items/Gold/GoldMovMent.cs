@@ -7,13 +7,21 @@ public class GoldMovMent : MonoBehaviour
     [SerializeField]
     public Transform moneyPlace;
     [SerializeField]
-    public float max;
+    public float addedMax;
     [SerializeField]
-    public float min;
+    public float addedMin;
     [SerializeField]
     float  speed;
     bool goUp;
+    private float max;
+    private float min;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        max = transform.localPosition.y + addedMax;
+        min = transform.localPosition.y - addedMin;
+    }
     void Start()
     {
 
