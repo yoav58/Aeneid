@@ -16,7 +16,7 @@ public class GoldCollider : MonoBehaviour
     {
         
     }
-
+    // this function will start when the user touch the coin.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")

@@ -29,4 +29,5 @@ public class SkillsManager : MonoBehaviour
     {
         skills[0].setAgent(a);
     }
+
 }

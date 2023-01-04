@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// this class is the actual skill, the fireball himself.
+
 public class FireBall : MonoBehaviour
 {
     public float speed;
@@ -11,6 +14,7 @@ public class FireBall : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Collider2D coll;
     public float damage;
+
 
     private void Awake()
     {

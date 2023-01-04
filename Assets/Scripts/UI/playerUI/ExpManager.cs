@@ -12,7 +12,17 @@ public class ExpManager : MonoBehaviour
     public int maxLevel;
     public int minLevel;
     private int maxXp;
+    public StatesLoader sl;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (sl.has_load_xp())
+        {
+            xp = sl.LoadXP();
+            level = sl.LoadLevel();
+        }
+    }
     void Start()
     {
         
@@ -32,6 +42,16 @@ public class ExpManager : MonoBehaviour
 
     public void addXP(float added)
     {
+        if(xp + added > maxXp)
+        {
+            level += 1;
+            xp = 0;
+        }
         xp += added;
+        
     }
-}
+
+
+    public int getLevel() { return level; }
+    public float getXP() { return xp; }
+}   

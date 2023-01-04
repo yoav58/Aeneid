@@ -13,7 +13,7 @@ namespace States
             agent.agentAnimation.playAnimation(AnimationType.Damage);
             playerSprite.color = Color.red;
         }
-
+        
        public void stopGetDamage()
         {
             agent.transitionToOtherState(idle, this);

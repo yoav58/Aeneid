@@ -10,6 +10,7 @@ public class SpaceShipCollider : MonoBehaviour
     public GameObject mark;
     public TMP_Text massageGuide;
     bool isInRange = false;
+    public StatesSaver sl;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class SpaceShipCollider : MonoBehaviour
         {
             if(isInRange)
             {
+                sl.SaveGame();
                 SceneManager.LoadScene("Space");
             }
         }

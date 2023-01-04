@@ -37,7 +37,8 @@ public class GoldMovMent : MonoBehaviour
     }
 
 
-
+    // thos moving methods is for create the coin look more dynamic.
+    // making the coin move up and down.
     private void moveUp(float speed)
     {
         goUp = true;

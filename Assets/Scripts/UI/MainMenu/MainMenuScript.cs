@@ -11,6 +11,20 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
     // Start is called before the first frame update
+
+
+    // for "new Game" button.
+    public void newGame()
+    {
+        PlayerPrefs.DeleteAll();
+        playGame();
+    }
+
+    public void loadGame()
+    {
+        playGame();
+    }
+
     void Start()
     {
         

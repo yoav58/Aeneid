@@ -81,6 +81,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (PlayerInSight())
         {
+            Debug.Log("insight");
             healthManager.reduceHealth(damage);
         }
     }

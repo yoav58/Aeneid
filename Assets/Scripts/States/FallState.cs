@@ -21,6 +21,7 @@ public class FallState : WalkState
        // dont allow jump
     }
 
+    // we want to fall but still move.
     public override void stateUpdate()
     {
         movmentData.currentVelocity = agent.rb2d.velocity;
