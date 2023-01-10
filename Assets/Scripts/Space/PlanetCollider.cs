@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlanetCollider : MonoBehaviour
 {
-    public string name;
+    public string PlanetName;
     bool inRange;
     public TMP_Text massageGuide;
     private string textGuide = "Press Enter to land";
