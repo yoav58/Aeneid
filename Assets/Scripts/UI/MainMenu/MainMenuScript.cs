@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("FightScene");
     }
     // Start is called before the first frame update
 

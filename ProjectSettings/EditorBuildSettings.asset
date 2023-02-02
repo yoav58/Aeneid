@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Space.unity
     guid: ac8cd4ca08eff40508fbed469f6d4c58
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 467b4d9ec99444e0b95777348e57e027
+  - enabled: 1
+    path: Assets/Scenes/FightScene.unity
+    guid: b882567bf4b5544dc9aeff09304e34ce
   m_configObjects: {}

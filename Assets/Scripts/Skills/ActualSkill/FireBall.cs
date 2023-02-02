@@ -53,9 +53,9 @@ public class FireBall : MonoBehaviour
         if(collision.tag == "Enemy") 
         {
            // Monster_First m = collision.gameObject.GetComponent<Monster_First>();
-           DamageEnemy m = collision.gameObject.GetComponent<DamageEnemy>();
+           DamageEnemyI m = collision.gameObject.GetComponent<DamageEnemyI>();
            // m.getDamage(damage);
-           m.hitTheEnemy();
+           m.hitTheEnemy(damage);
         }
         // it take time to Destroy object so Destroy the collider First.
         Destroy(coll);
