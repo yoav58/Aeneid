@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster_First : MonoBehaviour , Enemy
+public class Monster_First : MonoBehaviour , Enemy,IEnemyDamage
 {
     private Animator animator;
     private EnemyLifeBar lifeBar;
@@ -12,7 +12,7 @@ public class Monster_First : MonoBehaviour , Enemy
     public float xpReward;
 
 
-    public void getDamage(float damage)
+    public void hitTheEnemy(float damage)
     {
         animator.Play("demage", -1, 0f);
         lifeBar.reduceLife(damage);
