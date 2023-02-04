@@ -3,15 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageEnemy : MonoBehaviour, DamageEnemyI
+public class DamageEnemy : MonoBehaviour
 {
     private Animator anim;
-
-    public VillerLifeBar vlf;
-    public ExpManager playerXP;
-    public float xp_reward;
-
-    public float shield;
     // Start is called before the first frame update
 
     private void Awake()
@@ -30,17 +24,9 @@ public class DamageEnemy : MonoBehaviour, DamageEnemyI
         
     }
 
-    public void hitTheEnemy(float damage)
+    public void hitTheEnemy()
     {
-        float newDamage = damage * shield;
         // reduce life
         anim.SetTrigger("getHit");
-        vlf.reduceLife(newDamage);
-    }
-
-    public void killMonster()
-    {
-        //anim.SetTrigger("Died");
-        playerXP.addXP(xp_reward);
     }
 }
