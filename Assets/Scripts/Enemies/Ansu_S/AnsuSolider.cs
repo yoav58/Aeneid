@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster_First : EnemyMethods , Enemy,IEnemyDamage
+public class AnsuSolider : EnemyMethods , Enemy,IEnemyDamage
 {
     private Animator animator;
     private EnemyLifeBar lifeBar;
@@ -10,12 +10,13 @@ public class Monster_First : EnemyMethods , Enemy,IEnemyDamage
     public Transform placeCoin;
     public ExpManager playerXP;
     public float xpReward;
+    public float Defence; // add later;
 
 
     public void hitTheEnemy(float damage)
     {
-        animator.Play("demage", -1, 0f);
-        Debug.Log(damage);
+        animator.Play("Hit", -1, 0f);
+        damage = damage * ( (100-Defence) / 100);
         lifeBar.reduceLife(damage);
     }
 
@@ -29,7 +30,7 @@ public class Monster_First : EnemyMethods , Enemy,IEnemyDamage
     // Start is called before the first frame update
     void Start()
     {
-        lifeBar.setMonster(gameObject);       
+       // lifeBar.setMonster(gameObject);       
     }
 
     // Update is called once per frame

@@ -3363,7 +3363,7 @@ MonoBehaviour:
   b: {fileID: 9184433846005793178, guid: 55fbef5c043f240be97d4bdd5cd44f21, type: 3}
   placeCoin: {fileID: 1323058672}
   playerXP: {fileID: 2046059621}
-  xpReward: 4
+  xpReward: 2
 --- !u!70 &496120896
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

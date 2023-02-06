@@ -8,7 +8,7 @@ public class EnemyLifeBar : MonoBehaviour
     bool isDead = false;
     GameObject monster;
     public GameObject d;
-    public Monster_First m;
+    public EnemyMethods m;
 
     private void Awake()
     {
@@ -22,8 +22,6 @@ public class EnemyLifeBar : MonoBehaviour
         }else
         {
             lifeBar.localScale = new Vector3(0, lifeBar.localScale.y, lifeBar.localScale.z);
-            Debug.Log(monster.name);
-
             m.killMonster();
             Destroy(d);
             //Destroy(monster);

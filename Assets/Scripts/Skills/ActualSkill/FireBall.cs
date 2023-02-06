@@ -23,6 +23,7 @@ public class FireBall : MonoBehaviour
         agent = GameObject.Find("Agent").GetComponent<Agent>();
         rigidBody = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+        damage = 2.3f;
 
 
     }
