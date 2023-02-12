@@ -8,7 +8,7 @@ public class ColliderElring : MonoBehaviour
     public GameObject mark;
     public TMP_Text massageGuide;
     public DialogueTrigger dr;
-    bool isInRange = true;
+    bool isInRange = false;
 
     private bool inputOnce;
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class ColliderElring : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Return) && inputOnce == true)
+        if (Input.GetKey(KeyCode.Return) && inputOnce == true && isInRange)
         {
             dr.TriggerDialogue();
             inputOnce = false;

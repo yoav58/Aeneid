@@ -39,6 +39,9 @@ public class Ramero_Patrol : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Attack");
+        animator.ResetTrigger("getHit");
+        animator.ResetTrigger("Shield");
+
     }
 
 }

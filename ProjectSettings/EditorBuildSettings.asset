@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RedPlanetScene.unity
     guid: d9d6ab68853b34da9a1fd8ca509fa237
+  - enabled: 1
+    path: Assets/Scenes/RedPlanetBossFight.unity
+    guid: 29cdb792aafea42a388ef1cd5bb0fabd
   m_configObjects: {}
