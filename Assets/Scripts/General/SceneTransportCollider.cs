@@ -27,7 +27,7 @@ public class SceneTransportCollider : MonoBehaviour
         {
             if(isInRange)
             {
-                sl.SaveGame();
+                if(sl != null)sl.SaveGame();
                 SceneManager.LoadScene(SceneName);
             }
         }

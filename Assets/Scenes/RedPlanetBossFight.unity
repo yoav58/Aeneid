@@ -959,6 +959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossExists: 0
+  BossName: Ramero
 --- !u!4 &1389069403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6938353158683888753, guid: bbca2c977f65c45328deb83860c7b466, type: 3}

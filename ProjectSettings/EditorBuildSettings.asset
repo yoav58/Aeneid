@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RedPlanetBossFight.unity
     guid: 29cdb792aafea42a388ef1cd5bb0fabd
+  - enabled: 1
+    path: Assets/Scenes/VillerScene.unity
+    guid: 82884f9be723d45a2a9d083d11308660
   m_configObjects: {}

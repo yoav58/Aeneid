@@ -3,9 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageEnemy : MonoBehaviour, IEnemyDamage
+public class DamageEnemy : EnemyMethods, IEnemyDamage
 {
     private Animator anim;
+    private EnemyLifeBar lifeBar;
+    public ExpManager playerXP;
+    public float xpReward;
+    public GameObject exitArena;
+    public SceneSaver scs;
+
 
     public float shield;
     // Start is called before the first frame update
@@ -13,6 +19,7 @@ public class DamageEnemy : MonoBehaviour, IEnemyDamage
     private void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
+        lifeBar = GetComponentInChildren<EnemyLifeBar>();
    }
 
     void Start()
@@ -28,7 +35,15 @@ public class DamageEnemy : MonoBehaviour, IEnemyDamage
 
     public void hitTheEnemy(float damage)
     {
-        // reduce life
         anim.SetTrigger("getHit");
+        damage = damage * ( (100-shield) / 100);
+        lifeBar.reduceLife(damage);
+    }
+
+    public override void killMonster()
+    {
+        playerXP.addXP(xpReward);
+        exitArena.SetActive(true);
+        scs.saveBossState(2);
     }
 }

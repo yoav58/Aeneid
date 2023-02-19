@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class PlanetCollider : MonoBehaviour
 {
-    public string PlanetName;
+    public string SceneName;
     bool inRange;
     public TMP_Text massageGuide;
-    private string textGuide = "Press Enter to land";
+
+    public string textGuide;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class PlanetCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return) && inRange) SceneManager.LoadScene(name);
+        if (Input.GetKey(KeyCode.Return) && inRange) SceneManager.LoadScene(SceneName);
 
 
     }
