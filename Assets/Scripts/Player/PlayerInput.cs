@@ -12,14 +12,20 @@ public class PlayerInput : MonoBehaviour
     // we want to pass method to each Event.
     public event Action OnAttack, OnJumpPresset, OnJumpReleased, OnWeaponChange;
     // i prefered that skills will be in delegate and not event.
+    
+    // first skill delegate.
     public delegate void SkillDelegate();
     public SkillDelegate onSkillCast;
+    
+    // second skill
+    public SkillDelegate secondSkillCast;
     // when move
     public event Action<Vector2> OnMovment,OnRunning;
     // assign the controllers
-    public KeyCode jumpKey, attacKey, menuKey,swapSkill, firstSkill;
+    public KeyCode jumpKey, attacKey, menuKey,swapSkill, firstSkill,secondSkill,thirdSkill;
     public UnityEvent OnMenuKeyPressed;
     public bool doSkill = true;
+    public SkillsManager skm;
 
 
     private void Update()
@@ -31,6 +37,8 @@ public class PlayerInput : MonoBehaviour
             getAttackInput();
             getWeaponSwapInput();
             getFirstSkillInput();
+            getSecondSkillInput();
+            getThirdSkillInput();
         }
         getMenuInput();
        
@@ -90,8 +98,29 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(firstSkill))
             if(!agentAnimation.doingSkill())
         {
-                onSkillCast?.Invoke();
+            skm.currentSkill(0);
+            onSkillCast?.Invoke();
         }
+    }
+    
+    private void getSecondSkillInput()
+    {
+        if (Input.GetKeyDown(secondSkill))
+            if(!agentAnimation.doingSkill())
+            {
+                skm.currentSkill(1);
+                onSkillCast?.Invoke();
+            }
+    }
+
+    private void getThirdSkillInput()
+    {
+        if (Input.GetKeyDown(thirdSkill))
+            if(!agentAnimation.doingSkill())
+            {
+                skm.currentSkill(2);
+                onSkillCast?.Invoke();
+            }
     }
 
     private Vector2 getMovmentVector()

@@ -13,12 +13,27 @@ public class SkilllState : MonoBehaviour
     public Image firstSkill_image2;
     private float firstSkill_Cooldown;
     private bool firstSkill_NotStartSkill;
-
+    
+    [Header("Second Skill properties")]
+    
+    public Image secondSkill_image1;
+    public Image secondSkill_image2;
+    private float secondSkill_Cooldown;
+    private bool secondSkill_NotStartSkill;
+    
+    [Header("Third Skill properties")]
+    public Image thirdSkill_image1;
+    public Image thirdSkill_image2;
+    private float thirdSkill_Cooldown;
+    private bool thirdSkill_NotStartSkill;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         setSkill1(); 
+        setSkill2();
+        setSkill3();
 
     }
 
@@ -26,6 +41,8 @@ public class SkilllState : MonoBehaviour
     void Update()
     {
         skill1StateUpdate();
+        skill2Update();
+        skill3Update();
     }
 
 
@@ -38,6 +55,22 @@ public class SkilllState : MonoBehaviour
         firstSkill_image2.fillAmount = 0;
 
 
+    }
+
+    public void setSkill2()
+    {
+        secondSkill_image1.sprite = m_sk.skills[1].getSkillImage(1);
+        secondSkill_image2.sprite = m_sk.skills[1].getSkillImage(2);
+        secondSkill_Cooldown = m_sk.skills[1].getCoolDown();
+        secondSkill_image2.fillAmount = 0;
+    }
+
+    public void setSkill3()
+    {
+        thirdSkill_image1.sprite = m_sk.skills[2].getSkillImage(1);
+        thirdSkill_image2.sprite = m_sk.skills[2].getSkillImage(2);
+        thirdSkill_Cooldown = m_sk.skills[2].getCoolDown();
+        thirdSkill_image2.fillAmount = 0;
     }
 
 
@@ -62,4 +95,39 @@ public class SkilllState : MonoBehaviour
             }
         }
     }
-}
+
+    private void skill2Update()
+    {
+        if (m_sk.skills[1].isCoolDown() && secondSkill_NotStartSkill == false)
+        {
+            secondSkill_image2.fillAmount = 1;
+            secondSkill_NotStartSkill = true;
+        } else if (m_sk.skills[1].isCoolDown())
+        {
+            secondSkill_image2.fillAmount -= 1 / secondSkill_Cooldown * Time.deltaTime;
+            if(secondSkill_image2.fillAmount <= 0)
+            {
+                secondSkill_NotStartSkill = false;
+                m_sk.skills[1].setIsCoolDown(false); // when finish the animation let the player use the skill.
+            }
+        }
+    }
+
+    private void skill3Update()
+    {
+        if (m_sk.skills[2].isCoolDown() && thirdSkill_NotStartSkill == false)
+        {
+            thirdSkill_image2.fillAmount = 1;
+            thirdSkill_NotStartSkill = true;
+        } else if (m_sk.skills[2].isCoolDown())
+        {
+            thirdSkill_image2.fillAmount -= 1 / thirdSkill_Cooldown * Time.deltaTime;
+            if(thirdSkill_image2.fillAmount <= 0)
+            {
+                thirdSkill_NotStartSkill = false;
+                m_sk.skills[2].setIsCoolDown(false); // when finish the animation let the player use the skill.
+            }
+        }
+    }
+    
+    }

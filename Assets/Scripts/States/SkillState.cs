@@ -8,11 +8,14 @@ namespace States
 
         public State idleState;
         public SkillsManager skillManager;
+        public AgentAnimation agn;
 
         protected override void EnterState()
         {
             skillManager.setAgent(agent);
-            skillManager.skills[0].skillAction();
+            skillManager.doCurrentSkill();
+            agn.doSkillTrue();
+            
         }
 
         public override void stateUpdate()

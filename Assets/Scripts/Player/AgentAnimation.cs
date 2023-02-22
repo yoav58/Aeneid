@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AgentAnimation : MonoBehaviour
 {
+    private Animation animation;
     private Animator animator;
     bool DoingSkill = false;
     public States.DamageState damageState;
@@ -50,6 +51,9 @@ public class AgentAnimation : MonoBehaviour
             case AnimationType.Damage:
                 changeAnimation("damage");
                 break;
+            case AnimationType.Pause:
+                changeAnimation("Pause");
+                break;
             default:
                 break;
         }
@@ -90,5 +94,6 @@ public enum AnimationType
     Jump,
     Fall,
     FireBall,
-    Damage
+    Damage,
+    Pause
 }

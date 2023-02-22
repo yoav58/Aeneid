@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,5 +49,10 @@ public class AnsuSolider : EnemyMethods , Enemy,IEnemyDamage
     {
         playerXP.addXP(xpReward);
         Instantiate(b, placeCoin.position, placeCoin.rotation);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        //Debug.Log(col.gameObject.name);
     }
 }
