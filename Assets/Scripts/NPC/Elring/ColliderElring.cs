@@ -9,6 +9,7 @@ public class ColliderElring : MonoBehaviour
     public TMP_Text massageGuide;
     public DialogueTrigger dr;
     bool isInRange = false;
+    public string nameToSpeakWith;
 
     private bool inputOnce;
     // Start is called before the first frame update
@@ -38,7 +39,7 @@ public class ColliderElring : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             mark.SetActive(true);
-            massageGuide.text = "Press Enter to Speak with Elring";
+            massageGuide.text = "Press Enter to Speak with " + nameToSpeakWith;
             isInRange = true;
         }
     }

@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1003508261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003508262}
+  m_Layer: 0
+  m_Name: LongAttackPlace
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1003508262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003508261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.16, y: 2.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6938353158683888753}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1807479076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807479077}
+  m_Layer: 0
+  m_Name: TeleportPlace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807479077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807479076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.010004044, y: 2.0571427, z: 13.359887}
+  m_LocalScale: {x: 1, y: 1.038961, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6938353158683888753}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6938353157540783823
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +173,8 @@ GameObject:
   - component: {fileID: 6938353157898130112}
   - component: {fileID: 6938353157898130113}
   - component: {fileID: 6938353157898130115}
+  - component: {fileID: 1751548289}
+  - component: {fileID: 1751548293}
   m_Layer: 0
   m_Name: SkillManager
   m_TagString: Untagged
@@ -162,6 +226,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - {fileID: 6938353157898130115}
+  - {fileID: 1751548289}
+  - {fileID: 1751548293}
   agent: {fileID: 6938353158683888755}
 --- !u!114 &6938353157898130115
 MonoBehaviour:
@@ -183,6 +249,49 @@ MonoBehaviour:
   skillName: FireBall
   im1: {fileID: 21300000, guid: 7b8372e74c6d140d590c50f02ac67612, type: 3}
   im2: {fileID: 21300000, guid: 7b8372e74c6d140d590c50f02ac67612, type: 3}
+  _isCoolDown: 0
+--- !u!114 &1751548289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938353157898130108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6280208b041d44a48467383ec130b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 6938353158683888755}
+  SkillNumber: 1
+  lazerFirePlace: {fileID: 1003508262}
+  projectile: {fileID: 8335107516543795947, guid: 6bf7eadbe15604f5c9bd59112df8ab64, type: 3}
+  cooldown: 0
+  skillName: LazerFire
+  im1: {fileID: 21300000, guid: 4aad6d8a6fba5c147a9344f4218a2e7b, type: 3}
+  im2: {fileID: 21300000, guid: 4aad6d8a6fba5c147a9344f4218a2e7b, type: 3}
+  _isCoolDown: 0
+--- !u!114 &1751548293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938353157898130108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afa937d7dbd148b6a4b933ee12e12c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 6938353158683888755}
+  SkillNumber: 2
+  TeleportPlace: {fileID: 1807479077}
+  TeleportTarget: {fileID: 0}
+  projectile: {fileID: 2733247010544334549, guid: 367a2daf4ddf9644d9f21b1dd6943a99, type: 3}
+  cooldown: 0
+  skillName: Teleport
+  im1: {fileID: 21300000, guid: b96784c2c4385e3489c0951f941bdb97, type: 3}
+  im2: {fileID: 21300000, guid: b96784c2c4385e3489c0951f941bdb97, type: 3}
   _isCoolDown: 0
 --- !u!1 &6938353158334552383
 GameObject:
@@ -235,10 +344,13 @@ MonoBehaviour:
   menuKey: 0
   swapSkill: 0
   firstSkill: 122
+  secondSkill: 120
+  thirdSkill: 99
   OnMenuKeyPressed:
     m_PersistentCalls:
       m_Calls: []
   doSkill: 1
+  skm: {fileID: 6938353157898130113}
 --- !u!1 &6938353158504361511
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +435,8 @@ Transform:
   - {fileID: 6938353159000405135}
   - {fileID: 6938353157898130111}
   - {fileID: 6938353159316045153}
+  - {fileID: 1003508262}
+  - {fileID: 1807479077}
   m_Father: {fileID: 6938353158334552385}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -618,6 +732,7 @@ MonoBehaviour:
       m_Calls: []
   idleState: {fileID: 6938353159000405134}
   skillManager: {fileID: 6938353157898130113}
+  agn: {fileID: 6938353159336360896}
 --- !u!114 &6938353159000405143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,7 +922,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &6938353159336360897
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -824,7 +939,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &6938353159336360896
 MonoBehaviour:
   m_ObjectHideFlags: 0
