@@ -31,4 +31,13 @@ public class HealthManager : MonoBehaviour
     }
 
     public float getHealth() { return slider.value; }
+
+    public void addLife(float lifeAdding)
+    {
+        float newVal = slider.value + lifeAdding;
+        if (newVal > 100) newVal = 100;
+        slider.value = newVal;
+        Debug.Log(newVal);
+        Debug.Log(slider.value);
+    }
 }

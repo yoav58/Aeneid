@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PotionItem : Item
+public class StoreScript : MonoBehaviour
 {
-
-    
     // Start is called before the first frame update
     void Start()
     {
-               
+        
     }
 
     // Update is called once per frame
@@ -19,8 +16,8 @@ public class PotionItem : Item
         
     }
 
-    public override void use()
+    public void Exit()
     {
-        Debug.Log("drinkHealth");
+        
     }
 }

@@ -332,6 +332,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 912270659}
     - target: {fileID: 5496064010914347872, guid: c24e366c05e334daca37a5799d397770, type: 3}
+      propertyPath: SceneName
+      value: LantrenPlanetScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496064010914347872, guid: c24e366c05e334daca37a5799d397770, type: 3}
+      propertyPath: itemSaver
+      value: 
+      objectReference: {fileID: 1115630845}
+    - target: {fileID: 5496064010914347872, guid: c24e366c05e334daca37a5799d397770, type: 3}
       propertyPath: massageGuide
       value: 
       objectReference: {fileID: 1047482662}
@@ -4375,7 +4383,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 354466420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2105632793}
+        m_TargetAssemblyTypeName: ItemManager, Assembly-CSharp
+        m_MethodName: decreaseAmount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &354466420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4608,7 +4628,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 358683244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287758664}
+        m_TargetAssemblyTypeName: Store_Trigger, Assembly-CSharp
+        m_MethodName: closeStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &358683244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5163,7 +5195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 450313854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 539529107}
+        m_TargetAssemblyTypeName: StoreItem, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450313854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6379,6 +6423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 539529106}
+  - component: {fileID: 539529107}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -6409,6 +6454,22 @@ RectTransform:
   m_AnchoredPosition: {x: -186.6, y: 123.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &539529107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539529105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d1db3a0d7c54e968b76cb53f1f0d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: healthPotion
+  itemCost: 2
+  gm: {fileID: 1137916250}
+  itm: {fileID: 1115630842}
 --- !u!1 &545212045
 GameObject:
   m_ObjectHideFlags: 0
@@ -7709,6 +7770,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643141030}
   m_CullTransparentMesh: 1
+--- !u!1 &649189814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649189815}
+  m_Layer: 0
+  m_Name: PossibleItems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &649189815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649189814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2001388666}
+  m_Father: {fileID: 1115630843}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &649462923
 GameObject:
   m_ObjectHideFlags: 0
@@ -11878,7 +11971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 00d24408568984f129b7023cb677c0cd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12019,7 +12112,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1002116290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2105632793}
+        m_TargetAssemblyTypeName: ItemManager, Assembly-CSharp
+        m_MethodName: useItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1002116290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12789,6 +12894,88 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1115630841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115630843}
+  - component: {fileID: 1115630842}
+  - component: {fileID: 1115630845}
+  - component: {fileID: 1115630844}
+  m_Layer: 0
+  m_Name: BackPack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1115630842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115630841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df40687b2be14696aca95b3118097fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemList:
+  - {fileID: 2105632793}
+  - {fileID: 1450943092}
+  size: 0
+  maxSize: 2
+  itl: {fileID: 1115630844}
+  FirstTimeInScene: 0
+--- !u!4 &1115630843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115630841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.39483333, y: -4.1758018, z: 11.831539}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 649189815}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115630844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115630841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d0efeb6ede941429e52798e66e932c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itm: {fileID: 1115630842}
+  itemsPossible:
+  - healthPotion
+--- !u!114 &1115630845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115630841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f735f212b6ca344e6be3f5e6a7b23cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itm: {fileID: 1115630842}
 --- !u!1 &1116595739
 GameObject:
   m_ObjectHideFlags: 0
@@ -16313,6 +16500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450943091}
+  - component: {fileID: 1450943092}
   m_Layer: 5
   m_Name: Item2
   m_TagString: Untagged
@@ -16344,6 +16532,29 @@ RectTransform:
   m_AnchoredPosition: {x: -76, y: 17.600006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1450943092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450943090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190685c5228d84bb985159ee350240e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itm: {fileID: 0}
+  symbol: {fileID: 1347077825}
+  symbolObject: {fileID: 1347077823}
+  itemSave: {fileID: 0}
+  name: 
+  buttons: {fileID: 610561464}
+  Amount: {fileID: 1464105026}
+  amountText: {fileID: 0}
+  item: {fileID: 0}
+  isNull: 1
+  count: 0
 --- !u!1 &1455862511
 GameObject:
   m_ObjectHideFlags: 0
@@ -18665,6 +18876,17 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1641655777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 470598980536414634, guid: d7da3d89420424678ab21e304487513d, type: 3}
+  m_PrefabInstance: {fileID: 1071875848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646297773
 GameObject:
   m_ObjectHideFlags: 0
@@ -19244,6 +19466,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6938353158683888757, guid: bbca2c977f65c45328deb83860c7b466, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1641655777}
     - target: {fileID: 6938353159316045154, guid: bbca2c977f65c45328deb83860c7b466, type: 3}
       propertyPath: m_gd
       value: 
@@ -19252,12 +19478,27 @@ PrefabInstance:
       propertyPath: m_xp
       value: 
       objectReference: {fileID: 1137916249}
+    - target: {fileID: 6938353159316045155, guid: bbca2c977f65c45328deb83860c7b466, type: 3}
+      propertyPath: itm
+      value: 
+      objectReference: {fileID: 1115630842}
     - target: {fileID: 6938353159336360894, guid: bbca2c977f65c45328deb83860c7b466, type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbca2c977f65c45328deb83860c7b466, type: 3}
+--- !u!114 &1673604532 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6938353158683888757, guid: bbca2c977f65c45328deb83860c7b466, type: 3}
+  m_PrefabInstance: {fileID: 1673604531}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189fce7ae27984b95b57af62dcdaf8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1674596467
 GameObject:
   m_ObjectHideFlags: 0
@@ -22272,7 +22513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22424,6 +22665,100 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997392233}
+  m_CullTransparentMesh: 1
+--- !u!1 &2001388665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001388666}
+  - component: {fileID: 2001388669}
+  - component: {fileID: 2001388668}
+  - component: {fileID: 2001388667}
+  m_Layer: 0
+  m_Name: HealthPotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2001388666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001388665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 649189815}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2001388667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001388665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89a35f39e89d42debcdf27f56fcf7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: healthPotion
+  itemImage: {fileID: 2001388668}
+  itm: {fileID: 1115630842}
+  hlb: {fileID: 1673604532}
+  life: 10
+--- !u!114 &2001388668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001388665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 00d24408568984f129b7023cb677c0cd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2001388669
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001388665}
   m_CullTransparentMesh: 1
 --- !u!1 &2008148525
 GameObject:
@@ -23840,6 +24175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105632792}
+  - component: {fileID: 2105632793}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -23871,6 +24207,29 @@ RectTransform:
   m_AnchoredPosition: {x: -215, y: 17.600006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2105632793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105632791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190685c5228d84bb985159ee350240e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itm: {fileID: 1115630842}
+  symbol: {fileID: 977294694}
+  symbolObject: {fileID: 977294692}
+  itemSave: {fileID: 1115630845}
+  name: 
+  buttons: {fileID: 1431453213}
+  Amount: {fileID: 240504486}
+  amountText: {fileID: 1996354696}
+  item: {fileID: 0}
+  isNull: 1
+  count: 0
 --- !u!1 &2127620852
 GameObject:
   m_ObjectHideFlags: 0

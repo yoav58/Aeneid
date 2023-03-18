@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
  public class StatesSaver : MonoBehaviour
 {
 
     public Stats stats;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,9 +50,6 @@ using UnityEngine;
     {
         PlayerPrefs.SetInt("Health", stats.getLevel());
     }
-
-
-
-
+    
 
 }
