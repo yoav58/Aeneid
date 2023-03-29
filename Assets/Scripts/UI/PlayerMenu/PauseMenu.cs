@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject ItemsMenu;
+    public GameObject MissionMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,18 @@ public class PauseMenu : MonoBehaviour
     public void itemsReturn()
     {
         ItemsMenu.SetActive(false);
+        pauseMenuUI.SetActive(true);
+    }
+
+    public void missionsClick()
+    {
+        pauseMenuUI.SetActive(false);
+        MissionMenu.SetActive(true);
+    }
+
+    public void missionsReturn()
+    {
+        MissionMenu.SetActive(false);
         pauseMenuUI.SetActive(true);
     }
 }

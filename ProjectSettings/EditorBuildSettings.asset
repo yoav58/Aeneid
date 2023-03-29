@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/XeraPlanetScene.unity
     guid: 0349b14b60575445b8405932667be708
+  - enabled: 1
+    path: Assets/Scenes/FirensPlanetScene.unity
+    guid: 08702970a413e4dfb9267b1bc2ca4400
   m_configObjects: {}
