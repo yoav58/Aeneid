@@ -11,7 +11,7 @@ public class ExpManager : MonoBehaviour
     int level;
     public int maxLevel;
     public int minLevel;
-    private int maxXp;
+    private float maxXp;
     public StatesLoader sl;
     // Start is called before the first frame update
 
@@ -25,7 +25,7 @@ public class ExpManager : MonoBehaviour
     }
     void Start()
     {
-        
+        maxXp = xpView.maxValue;
     }
 
     // Update is called once per frame
@@ -46,8 +46,7 @@ public class ExpManager : MonoBehaviour
         {
             level += 1;
             xp = 0;
-        }
-        xp += added;
+        } else xp += added;
         
     }
 

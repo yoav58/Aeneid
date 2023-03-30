@@ -54,7 +54,7 @@ public class SpaceShipCollider : MonoBehaviour
         }
     }
 
-    private void saveSpaceLocation()
+    public void saveSpaceLocation()
     {
         PlayerPrefs.SetInt(SceneName,1);
     }

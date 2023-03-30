@@ -48,7 +48,7 @@ using UnityEngine;
 
     private void saveLevel()
     {
-        PlayerPrefs.SetInt("Health", stats.getLevel());
+        PlayerPrefs.SetInt("Level", stats.getLevel());
     }
     
 
