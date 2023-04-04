@@ -28,7 +28,6 @@ public class SpaceLoader : MonoBehaviour
     {
         for (int i = 0; i < planetsName.Length; i++)
         {
-            Debug.Log(PlayerPrefs.GetInt(planetsName[i]));
             if (PlayerPrefs.GetInt(planetsName[i]) == 1) return i;
         }
 

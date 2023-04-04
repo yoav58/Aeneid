@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class HealthManager : MonoBehaviour
     public Agent agent;
     public States.DamageState damageState;
     public StatesLoader stl;
+
+    public GameOverManager gameOverScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,7 @@ public class HealthManager : MonoBehaviour
     {
         agent.transitionToOtherState(damageState, agent.currentState);
         slider.value -= hitPower;
-        if (slider.value - hitPower < 0) slider.value = 0;
+        if (slider.value - hitPower < 0) diedAction();
     }
 
     public float getHealth() { return slider.value; }
@@ -39,5 +42,12 @@ public class HealthManager : MonoBehaviour
         slider.value = newVal;
         Debug.Log(newVal);
         Debug.Log(slider.value);
+    }
+
+    private void diedAction()
+    {
+        slider.value = 0;
+        slider.value += 15;
+        gameOverScreen.showGameOver();
     }
 }

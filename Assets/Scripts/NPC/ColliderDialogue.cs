@@ -18,6 +18,8 @@ public class ColliderDialogue : MonoBehaviour
     public int missionCount;
     public string[] newSentences;
     private bool inputOnce;
+
+    public bool hasMissions = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class ColliderDialogue : MonoBehaviour
             }
             dr.TriggerDialogue();
             inputOnce = false;
+            if(hasMissions) addMissions();
+            hasMissions = false;
         }
 
         if (!Input.GetKey(KeyCode.Return))
@@ -80,4 +84,5 @@ public class ColliderDialogue : MonoBehaviour
     }
     
     public virtual void awardMethod(){}
+    public virtual void addMissions(){}
 }

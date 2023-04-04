@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ColliderElring : MonoBehaviour
@@ -10,9 +11,8 @@ public class ColliderElring : MonoBehaviour
     public DialogueTrigger dr;
     bool isInRange = false;
     public string nameToSpeakWith;
-
     private bool inputOnce;
-    // Start is called before the first frame update
+// Start is called before the first frame update
     void Start()
     {
         
@@ -54,4 +54,5 @@ public class ColliderElring : MonoBehaviour
             isInRange = false;
         }
     }
+
 }

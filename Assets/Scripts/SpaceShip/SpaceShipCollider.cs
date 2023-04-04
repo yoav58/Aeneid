@@ -13,6 +13,8 @@ public class SpaceShipCollider : MonoBehaviour
     public StatesSaver sl;
     public ItemsSaver itemSaver;
     public string SceneName;
+
+    public SaverAllScript saver;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class SpaceShipCollider : MonoBehaviour
                 sl.SaveGame();
                 itemSaver.saveItems();
                 saveSpaceLocation();
+                saver.save();
                 SceneManager.LoadScene("Space");
             }
         }

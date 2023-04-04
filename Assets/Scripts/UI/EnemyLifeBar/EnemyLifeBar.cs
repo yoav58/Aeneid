@@ -22,6 +22,7 @@ public class EnemyLifeBar : MonoBehaviour
         }else
         {
             lifeBar.localScale = new Vector3(0, lifeBar.localScale.y, lifeBar.localScale.z);
+            m.atDeath();
             m.killMonster();
             Destroy(d);
             //Destroy(monster);

@@ -28,6 +28,7 @@ public class MissionSaverLoader : MonoBehaviour
     {
         codes = ms.getCodes();
         currentCodes = ms.getCurrentCodes();
+        if (codes == null) return;
         foreach (var code in codes)
         {
             PlayerPrefs.SetInt(code.ToString(),1);

@@ -7,6 +7,9 @@ public class GrudoDialougeReward : ColliderDialogue
 {
     public int goldAward;
     public GoldManager gm;
+    public MissionOption[] missions;
+    public MissionScript missionManager;
+    
     public override void awardMethod()
     {
         gm.addCoin(goldAward);
@@ -22,5 +25,13 @@ public class GrudoDialougeReward : ColliderDialogue
     void Update()
     {
         
+    }
+
+    public override void addMissions()
+    {
+        foreach (var m in missions)
+        {
+            missionManager.addMission(m.description,m.location,m.code);
+        }
     }
 }

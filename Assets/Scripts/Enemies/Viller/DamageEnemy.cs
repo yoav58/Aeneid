@@ -11,6 +11,8 @@ public class DamageEnemy : EnemyMethods, IEnemyDamage
     public float xpReward;
     public GameObject exitArena;
     public SceneSaver scs;
+    public int missionCode;
+    public MissionScript missionManager;
 
 
     public float shield;
@@ -45,5 +47,10 @@ public class DamageEnemy : EnemyMethods, IEnemyDamage
         playerXP.addXP(xpReward);
         exitArena.SetActive(true);
         scs.saveBossState(2);
+    }
+
+    public override void atDeath()
+    {
+        missionManager.deleteMission(missionCode);
     }
 }

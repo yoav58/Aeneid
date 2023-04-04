@@ -1711,19 +1711,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6509998984965209485, guid: 7241b119b0fd94f42a8ed4c5d8884360, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.17659256
+      value: 0.1920444
       objectReference: {fileID: 0}
     - target: {fileID: 6509998984965209485, guid: 7241b119b0fd94f42a8ed4c5d8884360, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.12556386
+      value: 0.13843414
       objectReference: {fileID: 0}
     - target: {fileID: 6509998984965209485, guid: 7241b119b0fd94f42a8ed4c5d8884360, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.801784
+      value: -2.8005
       objectReference: {fileID: 0}
     - target: {fileID: 6509998984965209485, guid: 7241b119b0fd94f42a8ed4c5d8884360, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0908
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 6509998984965209485, guid: 7241b119b0fd94f42a8ed4c5d8884360, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2082,19 +2082,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1220088082067854656, guid: 38e1baebd7e9a4d259a4835eb6062882, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.20390625
+      value: -0.2166504
       objectReference: {fileID: 0}
     - target: {fileID: 1220088082067854656, guid: 38e1baebd7e9a4d259a4835eb6062882, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.122375004
+      value: 0.12849374
       objectReference: {fileID: 0}
     - target: {fileID: 1220088082067854656, guid: 38e1baebd7e9a4d259a4835eb6062882, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.650784
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 1220088082067854656, guid: 38e1baebd7e9a4d259a4835eb6062882, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0669
+      value: -3.05
       objectReference: {fileID: 0}
     - target: {fileID: 1220088082067854656, guid: 38e1baebd7e9a4d259a4835eb6062882, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2639,6 +2639,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525805250}
   m_CullTransparentMesh: 1
+--- !u!1 &547833955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547833956}
+  - component: {fileID: 547833957}
+  m_Layer: 0
+  m_Name: Mission1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547833956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547833955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1768415504}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547833957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547833955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97227f466546142ce82d3ef09e8e0d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Kill Viller
+  location: Foen Planet
+  code: 1
 --- !u!1001 &574810094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2720,6 +2767,53 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: c54c16299431342cba6fe4925d71b76c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1025738d491b4efb8057324e169a4e9, type: 3}
+--- !u!1 &575328348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575328349}
+  - component: {fileID: 575328350}
+  m_Layer: 0
+  m_Name: Mission2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575328349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575328348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1768415504}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575328350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575328348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97227f466546142ce82d3ef09e8e0d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  location: 
+  code: 0
 --- !u!114 &601017847 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8662645247115893621, guid: 8419f539c78ac436caac41787681317d, type: 3}
@@ -3955,19 +4049,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1681607927264740228, guid: c561a3bebc6bb454c84336303dbe13c4, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.1859546
+      value: -0.20222563
       objectReference: {fileID: 0}
     - target: {fileID: 1681607927264740228, guid: c561a3bebc6bb454c84336303dbe13c4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.12299325
+      value: 0.13079563
       objectReference: {fileID: 0}
     - target: {fileID: 1681607927264740228, guid: c561a3bebc6bb454c84336303dbe13c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4912162
+      value: 1.4894
       objectReference: {fileID: 0}
     - target: {fileID: 1681607927264740228, guid: c561a3bebc6bb454c84336303dbe13c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0476
+      value: -3.0935
       objectReference: {fileID: 0}
     - target: {fileID: 1681607927264740228, guid: c561a3bebc6bb454c84336303dbe13c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4942,8 +5036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97227f466546142ce82d3ef09e8e0d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: kill the leader of anemia
-  location: the red planet
+  description: Kill Viller
+  location: Foen Planet
   code: 1
 --- !u!114 &1351451498
 MonoBehaviour:
@@ -6500,12 +6594,16 @@ MonoBehaviour:
   nameToSpeakWith: Grudo
   missionsToCompleName: GrudoMissions
   finishedOnce: 1
-  missionCount: 2
+  missionCount: 1
   newSentences:
   - Great job!
   - Here your award.
+  hasMissions: 1
   goldAward: 250
   gm: {fileID: 317142583}
+  missions:
+  - {fileID: 547833957}
+  missionManager: {fileID: 65355056}
 --- !u!1001 &1812139790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6733,6 +6831,10 @@ PrefabInstance:
       propertyPath: sl
       value: 
       objectReference: {fileID: 726345560}
+    - target: {fileID: 5496064010914347872, guid: c24e366c05e334daca37a5799d397770, type: 3}
+      propertyPath: saver
+      value: 
+      objectReference: {fileID: 1066406481}
     - target: {fileID: 5496064010914347872, guid: c24e366c05e334daca37a5799d397770, type: 3}
       propertyPath: SceneName
       value: FirensPlanetScene

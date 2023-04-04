@@ -85,10 +85,13 @@ public class MissionScript : MonoBehaviour
 *****************************************************************/
     public void deleteMission(int code)
     {
+        if (missionsList == null) return;
         foreach (var m in missionsList)
         {
             if (m.code == code) toggleMissions(m);
+            if(string.IsNullOrEmpty(m.description.text)) removeMission(m);
         }
+        
     }
 /******************************************************************
 * Function Name: toggleMissions
@@ -104,6 +107,7 @@ public class MissionScript : MonoBehaviour
 
     private void toggleMissions(Mission m, int index)
     {
+        Debug.Log(missionsList.Count);
         if (index >= missionsList.Count) return;
         if (index == missionsList.Count - 1)
         {
