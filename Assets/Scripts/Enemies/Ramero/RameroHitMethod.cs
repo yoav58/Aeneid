@@ -13,6 +13,8 @@ public class RameroHitMethod : EnemyMethods, IEnemyDamage
     public float xpReward;
     public GameObject exitArena;
     public SceneSaver scs;
+    public int missionCode;
+    public MissionScript missionManager;
 
 
     private void Awake()
@@ -47,6 +49,9 @@ public class RameroHitMethod : EnemyMethods, IEnemyDamage
     {
         isInDefence = b;
     }
-    
 
+    public override void atDeath()
+    {
+        missionManager.deleteMission(missionCode);
+    }
 }

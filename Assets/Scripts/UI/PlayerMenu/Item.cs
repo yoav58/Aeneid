@@ -24,6 +24,5 @@ public abstract class Item : MonoBehaviour
     public void addThisItem()
     {
         itm.getItemDictionary().Add(this.itemName,this);
-        Debug.Log("added");
     }
 }

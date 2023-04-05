@@ -54,7 +54,6 @@ public class MissionScript : MonoBehaviour
     {
         if(missionsList == null) initializeList();
         if (codes.Contains(c)) return;
-        Debug.Log(missionsList[0].isActive);
         foreach (Mission m in missionsList)
         {
             if (m.isActive == false)
@@ -102,12 +101,12 @@ public class MissionScript : MonoBehaviour
     private void toggleMissions(Mission m)
     {
         var index = missionsList.IndexOf(m);
-        toggleMissions(m, index);
+        toggleMissions(m, index,true);
     }
 
-    private void toggleMissions(Mission m, int index)
+    private void toggleMissions(Mission m, int index,bool first)
     {
-        Debug.Log(missionsList.Count);
+        if(first)currentCodes.Remove(m.code);
         if (index >= missionsList.Count) return;
         if (index == missionsList.Count - 1)
         {
@@ -119,7 +118,7 @@ public class MissionScript : MonoBehaviour
             copyMission(m, missionsList[index + 1]);
         }
 
-        toggleMissions(missionsList[index + 1], index + 1);
+        toggleMissions(missionsList[index + 1], index + 1,false);
     }
 /******************************************************************
 * Function Name: removeMission

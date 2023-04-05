@@ -28,7 +28,10 @@ public class MissionSaverLoader : MonoBehaviour
     {
         codes = ms.getCodes();
         currentCodes = ms.getCurrentCodes();
-        if (codes == null) return;
+        if (codes == null)
+        {
+            return;
+        }
         foreach (var code in codes)
         {
             PlayerPrefs.SetInt(code.ToString(),1);
@@ -45,7 +48,6 @@ public class MissionSaverLoader : MonoBehaviour
         foreach (var m in missions)
         {
             int savedType = PlayerPrefs.GetInt(m.code.ToString());
-            Debug.Log(savedType);
             if (savedType != 0)
             {
                 if (savedType == 1)
@@ -57,5 +59,7 @@ public class MissionSaverLoader : MonoBehaviour
             }
         } 
     }
+
+
     
 }

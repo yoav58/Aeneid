@@ -7813,6 +7813,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1351451497, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: location
+      value: Foen Planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: location
+      value: '"Red" Planet'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: description
+      value: Kill Ramero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: code
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: description
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1908154127, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: glm
       value: 
@@ -9504,7 +9528,7 @@ MonoBehaviour:
   mark: {fileID: 0}
   massageGuide: {fileID: 1933496031}
   textGuide: Press Enter to fight Against Viller
-  sl: {fileID: 1659013143}
+  sl: {fileID: 0}
   SceneName: VillerScene
 --- !u!61 &316194105
 BoxCollider2D:
@@ -44340,6 +44364,10 @@ PrefabInstance:
       propertyPath: TeleportTarget
       value: 
       objectReference: {fileID: 389519642}
+    - target: {fileID: 8492618860170516639, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: animationManager
+      value: 
+      objectReference: {fileID: 1659013146}
     - target: {fileID: 8492618860458889578, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_gd
       value: 
@@ -44431,6 +44459,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1cd482bfa9be49e7bccb05356fa9676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1659013146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8492618860369893320, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+  m_PrefabInstance: {fileID: 1659013142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a28e28767a9c445eb5867afef0cbc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1659013149 stripped

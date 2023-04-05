@@ -28,6 +28,6 @@ public class SaverAllScript : MonoBehaviour
         sts.SaveGame();
         msl.save();
         Is.saveItems();
-        sph.saveSpaceLocation();
+        if(sph != null) sph.saveSpaceLocation();
     }
 }

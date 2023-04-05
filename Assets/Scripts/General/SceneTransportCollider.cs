@@ -11,7 +11,7 @@ public class SceneTransportCollider : MonoBehaviour
     public TMP_Text massageGuide;
     public string textGuide;
     bool isInRange = false;
-    public StatesSaver sl;
+    public SaverAllScript sl;
 
     public string SceneName;
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class SceneTransportCollider : MonoBehaviour
         {
             if(isInRange)
             {
-                if(sl != null)sl.SaveGame();
+                if(sl != null)sl.save();
                 SceneManager.LoadScene(SceneName);
             }
         }

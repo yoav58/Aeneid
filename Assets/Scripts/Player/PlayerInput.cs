@@ -96,10 +96,14 @@ public class PlayerInput : MonoBehaviour
     private void getFirstSkillInput()
     {
         if (Input.GetKeyDown(firstSkill))
-            if(!agentAnimation.doingSkill())
         {
-            skm.currentSkill(0);
-            onSkillCast?.Invoke();
+            Debug.Log("pressed Skill");
+            if (!agentAnimation.doingSkill())
+            {
+                Debug.Log("doing Skill");
+                skm.currentSkill(0);
+                onSkillCast?.Invoke();
+            }
         }
     }
     

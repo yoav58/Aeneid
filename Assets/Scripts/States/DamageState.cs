@@ -8,6 +8,7 @@ namespace States
         public HealthManager health;
         public IdleState idle;
         public SpriteRenderer playerSprite;
+        public AgentAnimation animationManager;
         protected override void EnterState()
         {
             agent.agentAnimation.playAnimation(AnimationType.Damage);
@@ -16,6 +17,7 @@ namespace States
         
        public void stopGetDamage()
         {
+            animationManager.doSkillFalse();
             agent.transitionToOtherState(idle, this);
             playerSprite.color = Color.white;
         }
