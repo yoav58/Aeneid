@@ -13,6 +13,7 @@ public class DamageEnemy : EnemyMethods, IEnemyDamage
     public SceneSaver scs;
     public int missionCode;
     public MissionScript missionManager;
+    public missionsFinishedManager missionFinished;
 
 
     public float shield;
@@ -52,5 +53,6 @@ public class DamageEnemy : EnemyMethods, IEnemyDamage
     public override void atDeath()
     {
         missionManager.deleteMission(missionCode);
+        if(missionFinished != null) missionFinished.finishedMission();
     }
 }

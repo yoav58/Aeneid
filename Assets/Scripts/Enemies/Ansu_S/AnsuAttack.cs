@@ -77,7 +77,7 @@ public class AnsuAttack : MonoBehaviour
     }
 
 
-    private void damagePlayer()
+    private void AttackPlayer()//damagePlayer()
     {
         if (PlayerInSight())
         {

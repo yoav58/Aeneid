@@ -15,6 +15,7 @@ public class RameroHitMethod : EnemyMethods, IEnemyDamage
     public SceneSaver scs;
     public int missionCode;
     public MissionScript missionManager;
+    public missionsFinishedManager missionFinish;
 
 
     private void Awake()
@@ -53,5 +54,7 @@ public class RameroHitMethod : EnemyMethods, IEnemyDamage
     public override void atDeath()
     {
         missionManager.deleteMission(missionCode);
+        if(missionFinish != null) missionFinish.finishedMission();
+
     }
 }

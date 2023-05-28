@@ -7845,6 +7845,14 @@ PrefabInstance:
       propertyPath: expm
       value: 
       objectReference: {fileID: 1933496036}
+    - target: {fileID: 2061786390, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 619663631}
+    - target: {fileID: 2061786390, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: save
+      objectReference: {fileID: 0}
     - target: {fileID: 281290058389657395, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_Name
       value: MenuCanvas Variant
@@ -9528,7 +9536,7 @@ MonoBehaviour:
   mark: {fileID: 0}
   massageGuide: {fileID: 1933496031}
   textGuide: Press Enter to fight Against Viller
-  sl: {fileID: 0}
+  sl: {fileID: 619663631}
   SceneName: VillerScene
 --- !u!61 &316194105
 BoxCollider2D:
@@ -13857,7 +13865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447673754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.72, y: 1.3899999, z: -10}
+  m_LocalPosition: {x: 676.51, y: 8.12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15731,7 +15739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.72, y: 1.3899999, z: -10}
+  m_LocalPosition: {x: 676.51, y: 8.12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44386,11 +44394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.09
+      value: 656.14
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: 4.96
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.z

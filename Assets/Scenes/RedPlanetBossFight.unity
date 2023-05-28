@@ -1092,6 +1092,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
+--- !u!1 &1184501585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3534360806508387271, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
+  m_PrefabInstance: {fileID: 1184501584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1266952431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1336,6 +1341,7 @@ MonoBehaviour:
   scs: {fileID: 1332962247}
   missionCode: 2
   missionManager: {fileID: 1689956200}
+  missionFinish: {fileID: 1405806523}
 --- !u!114 &1332962247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,12 +1361,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3534360806508387288, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
   m_PrefabInstance: {fileID: 1184501584}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1184501585}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 359bc67bf3f6f48e3a3ff8701c72c8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1405806523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184501585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fe7ff6f866047f098de03fe0ed2c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionName: GrudoMissions
+  missionCount: 0
 --- !u!114 &1594277516 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8492618861356056265, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}

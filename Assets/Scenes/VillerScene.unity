@@ -3231,6 +3231,14 @@ PrefabInstance:
       propertyPath: description
       value: Find The Scroll
       objectReference: {fileID: 0}
+    - target: {fileID: 1908154127, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: glm
+      value: 
+      objectReference: {fileID: 262866260}
+    - target: {fileID: 1908154127, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: expm
+      value: 
+      objectReference: {fileID: 262866261}
     - target: {fileID: 281290058389657395, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_Name
       value: MenuCanvas Variant
@@ -6779,6 +6787,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
+--- !u!114 &664962616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3534360806508387288, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
+  m_PrefabInstance: {fileID: 664962615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664962617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359bc67bf3f6f48e3a3ff8701c72c8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &664962617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3534360806508387271, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
+  m_PrefabInstance: {fileID: 664962615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &664962618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664962617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fe7ff6f866047f098de03fe0ed2c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionName: GrudoMissions
+  missionCount: 0
 --- !u!1 &685999655
 GameObject:
   m_ObjectHideFlags: 0
@@ -7112,6 +7150,7 @@ MonoBehaviour:
   scs: {fileID: 742823351}
   missionCode: 1
   missionManager: {fileID: 288793821}
+  missionFinished: {fileID: 664962618}
   shield: 80
 --- !u!114 &742823347
 MonoBehaviour:
@@ -8822,7 +8861,7 @@ MonoBehaviour:
   mark: {fileID: 0}
   massageGuide: {fileID: 22991010}
   textGuide: Press Enter to leave arena
-  sl: {fileID: 0}
+  sl: {fileID: 664962616}
   SceneName: SampleScene
 --- !u!1 &952921893
 GameObject:

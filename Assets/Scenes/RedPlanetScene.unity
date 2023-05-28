@@ -1797,19 +1797,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1177.9867
+      value: -25.006348
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.67
+      value: 1.3254399
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1177.9867
+      value: -25.463348
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.67
+      value: 0.80000013
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028484, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_Follow
@@ -15481,6 +15481,14 @@ PrefabInstance:
       propertyPath: expm
       value: 
       objectReference: {fileID: 1782593209}
+    - target: {fileID: 2061786390, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 171303408}
+    - target: {fileID: 2061786390, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: save
+      objectReference: {fileID: 0}
     - target: {fileID: 281290058389657395, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_Name
       value: MenuCanvas Variant
@@ -24523,11 +24531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 691
+      value: -512.45
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: -2.27
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25760,7 +25768,7 @@ MonoBehaviour:
   mark: {fileID: 0}
   massageGuide: {fileID: 1593140830}
   textGuide: Press Enter to fight Against the Ansu Captain Ramero
-  sl: {fileID: 0}
+  sl: {fileID: 171303408}
   SceneName: RedPlanetBossFight
 --- !u!61 &1968266521
 BoxCollider2D:

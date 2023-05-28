@@ -15,7 +15,7 @@ public class RameroAttack : MonoBehaviour
     
     public  HealthManager healthManager; // player health manager
 
-    public void Attack()
+    public void AttackPlayer()
     {
         Vector3 pos = transform.position;
         pos += transform.right * attackOffSet.x;

@@ -9,9 +9,11 @@ public class GrudoDialougeReward : ColliderDialogue
     public GoldManager gm;
     public MissionOption[] missions;
     public MissionScript missionManager;
+    public Reward reward;
     
     public override void awardMethod()
     {
+        if(reward != null) reward.GetReward();
         gm.addCoin(goldAward);
     }
 
