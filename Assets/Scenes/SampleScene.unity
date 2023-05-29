@@ -7827,15 +7827,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: code
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: location
-      value: 
+      value: Xera Planet
       objectReference: {fileID: 0}
     - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: description
-      value: 
+      value: Find The Scroll
       objectReference: {fileID: 0}
     - target: {fileID: 1908154127, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: glm

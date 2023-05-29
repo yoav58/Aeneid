@@ -1764,6 +1764,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &133106321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133106323}
+  - component: {fileID: 133106322}
+  m_Layer: 0
+  m_Name: tileset_1_17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &133106322
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133106321}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 2014575941
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 5826004300318112913, guid: aff2e1025b3883346993693f07b2c3c5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.56, y: 2.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &133106323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133106321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 286.53, y: 1.51, z: 0}
+  m_LocalScale: {x: 10.273441, y: 0.48126101, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &133706201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2367,9 +2451,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2014575941
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1330817593
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5026875024592050557, guid: aff2e1025b3883346993693f07b2c3c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2389,8 +2473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170214170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.59999, y: 1.88, z: 1.7645926}
-  m_LocalScale: {x: 2.12625, y: 0.9153126, z: 1}
+  m_LocalPosition: {x: 17.45, y: 1.88, z: 1.7645926}
+  m_LocalScale: {x: 2.2325625, y: 0.92675406, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1237767816}
@@ -2587,8 +2671,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1330817593
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 25abc295f234c9c4facbe0b1c58a604b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3207,19 +3291,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 265.89395
+      value: 265.3191
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.28777
+      value: 5.28218
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633362772346475175, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
+      propertyPath: m_Depth
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 265.78998
+      value: 265.21
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.67
+      value: 8.83
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028484, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_Follow
@@ -6953,9 +7041,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: healthPotion
-  itemCost: 2
+  itemCost: 150
   gm: {fileID: 1137916250}
   itm: {fileID: 1115630842}
+  itemCostText: {fileID: 1792176486}
+  DiscountName: HellorReward
+  DiscountDivider: 2
 --- !u!1 &539960274
 GameObject:
   m_ObjectHideFlags: 0
@@ -10584,6 +10675,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: deleteSave
       objectReference: {fileID: 0}
+    - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: location
+      value: '"Red" Planet'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: description
+      value: Kill Raemro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: code
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: location
+      value: Xera Planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351451499, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: description
+      value: Find The Scroll
+      objectReference: {fileID: 0}
     - target: {fileID: 1908154127, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: glm
       value: 
@@ -14183,8 +14294,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1330817593
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 25abc295f234c9c4facbe0b1c58a604b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15816,8 +15927,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1330817593
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 25abc295f234c9c4facbe0b1c58a604b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17177,8 +17288,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2014575941
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 204ea249fd1519346add8bc0be2679c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18259,7 +18370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 550
+  m_text: 150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21210,7 +21321,7 @@ MonoBehaviour:
   massageGuide: {fileID: 1047482662}
   dr: {fileID: 1992262755}
   nameToSpeakWith: Hellor
-  missionsToCompleName: Hellor
+  missionsToCompleName: HellorMissions
   finishedOnce: 1
   missionCount: 1
   newSentences:
@@ -21223,6 +21334,7 @@ MonoBehaviour:
   missions:
   - {fileID: 27336227}
   missionManager: {fileID: 887568229}
+  reward: {fileID: 1992262756}
 --- !u!4 &1992262754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3921604806742358577, guid: 6d3e00ce12a744a948ca9408db6dfd42, type: 3}
@@ -21239,6 +21351,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511659ac99da04b0f978028d28e82194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992262756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992262752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa5396a41683419e8d71da4d4f5b2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardName: HellorReward
+  items: {fileID: 539529107}
 --- !u!1 &2005282712
 GameObject:
   m_ObjectHideFlags: 0
@@ -23286,11 +23412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8662645246990090068, guid: 8419f539c78ac436caac41787681317d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 267.87
+      value: 267.29
       objectReference: {fileID: 0}
     - target: {fileID: 8662645246990090068, guid: 8419f539c78ac436caac41787681317d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.61
+      value: 4.77
       objectReference: {fileID: 0}
     - target: {fileID: 8662645246990090068, guid: 8419f539c78ac436caac41787681317d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23384,6 +23510,14 @@ PrefabInstance:
     - target: {fileID: 1871099046332807218, guid: ac26b0811a4164c8399324e5409b8c75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871099046332807219, guid: ac26b0811a4164c8399324e5409b8c75, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 305.59564
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871099046332807219, guid: ac26b0811a4164c8399324e5409b8c75, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -6.2227435
       objectReference: {fileID: 0}
     - target: {fileID: 1871099046332807244, guid: ac26b0811a4164c8399324e5409b8c75, type: 3}
       propertyPath: m_Name

@@ -5066,9 +5066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97227f466546142ce82d3ef09e8e0d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: 
-  location: 
-  code: 0
+  description: Find The Scroll
+  location: Xera Planet
+  code: 3
 --- !u!114 &1351451500
 MonoBehaviour:
   m_ObjectHideFlags: 0
