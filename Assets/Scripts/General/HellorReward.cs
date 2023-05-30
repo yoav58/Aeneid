@@ -21,7 +21,7 @@ public class HellorReward : Reward
     public override void GetReward()
     {
         if (PlayerPrefs.GetInt(rewardName) == 1) return;
-        items.CostDiscount(2);
+        //items.CostDiscount(2);
         PlayerPrefs.SetInt(rewardName,1);
         Debug.Log("get reward");
     }

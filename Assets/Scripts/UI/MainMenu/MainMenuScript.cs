@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene("RedPlanetScene");
+        SceneManager.LoadScene("FirensPlanetScene");
     }
     // Start is called before the first frame update
 
@@ -23,6 +23,16 @@ public class MainMenuScript : MonoBehaviour
     public void loadGame()
     {
         playGame();
+    }
+
+    public void quit()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+         Application.Quit();
+        #endif
+
     }
 
     void Start()

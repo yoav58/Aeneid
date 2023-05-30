@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 467b4d9ec99444e0b95777348e57e027
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Space.unity
     guid: ac8cd4ca08eff40508fbed469f6d4c58
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 467b4d9ec99444e0b95777348e57e027
   - enabled: 1
     path: Assets/Scenes/RedPlanetScene.unity
     guid: d9d6ab68853b34da9a1fd8ca509fa237

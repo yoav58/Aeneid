@@ -15481,6 +15481,14 @@ PrefabInstance:
       propertyPath: expm
       value: 
       objectReference: {fileID: 1782593209}
+    - target: {fileID: 2000503035, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: itm
+      value: 
+      objectReference: {fileID: 1325383495}
+    - target: {fileID: 2000503035, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: itemSave
+      value: 
+      objectReference: {fileID: 428422145}
     - target: {fileID: 2061786390, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16598,6 +16606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1196663287840794282, guid: 1f0bf90b7d0ee4b4ba02b32c2f681d09, type: 3}
+      propertyPath: hlb
+      value: 
+      objectReference: {fileID: 1694579447}
     - target: {fileID: 1196663288699915816, guid: 1f0bf90b7d0ee4b4ba02b32c2f681d09, type: 3}
       propertyPath: m_Name
       value: BackPack
@@ -16648,6 +16660,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0bf90b7d0ee4b4ba02b32c2f681d09, type: 3}
+--- !u!114 &1325383495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1196663288699915819, guid: 1f0bf90b7d0ee4b4ba02b32c2f681d09, type: 3}
+  m_PrefabInstance: {fileID: 1325383494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df40687b2be14696aca95b3118097fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1325408830
 PrefabInstance:
   m_ObjectHideFlags: 0

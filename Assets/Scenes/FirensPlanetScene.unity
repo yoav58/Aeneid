@@ -847,8 +847,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3067022842077715366, guid: 859ce0d94db0e4d56ad555546ef1e9a7, type: 3}
+      propertyPath: hlb
+      value: 
+      objectReference: {fileID: 1071342787}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 859ce0d94db0e4d56ad555546ef1e9a7, type: 3}
+--- !u!114 &117240725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3067022841761821479, guid: 859ce0d94db0e4d56ad555546ef1e9a7, type: 3}
+  m_PrefabInstance: {fileID: 117240724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df40687b2be14696aca95b3118097fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &119968997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -998,6 +1013,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2105632793, guid: ae88164ddb5ab4c7cae74543240abc6f, type: 3}
+      propertyPath: itm
+      value: 
+      objectReference: {fileID: 117240725}
+    - target: {fileID: 2105632793, guid: ae88164ddb5ab4c7cae74543240abc6f, type: 3}
+      propertyPath: itemSave
+      value: 
+      objectReference: {fileID: 1128951526}
     - target: {fileID: 229322801799498576, guid: ae88164ddb5ab4c7cae74543240abc6f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 45
@@ -3849,6 +3872,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8662645246808320612, guid: 8419f539c78ac436caac41787681317d, type: 3}
   m_PrefabInstance: {fileID: 1071342785}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1071342787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8662645246808320608, guid: 8419f539c78ac436caac41787681317d, type: 3}
+  m_PrefabInstance: {fileID: 1071342785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189fce7ae27984b95b57af62dcdaf8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1071662288
 GameObject:
   m_ObjectHideFlags: 0
@@ -6605,6 +6639,7 @@ MonoBehaviour:
   - {fileID: 547833957}
   - {fileID: 575328350}
   missionManager: {fileID: 65355056}
+  reward: {fileID: 0}
 --- !u!1001 &1812139790
 PrefabInstance:
   m_ObjectHideFlags: 0
