@@ -546,6 +546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554353973089283465, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8492618860170516639, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: animationManager
       value: 
@@ -568,11 +572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.18
+      value: -26.74
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.44
+      value: -3.74
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -614,6 +618,10 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 40423539}
+    - target: {fileID: 8492618861356056267, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
 --- !u!4 &538247256 stripped
@@ -1401,19 +1409,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.872515
+      value: -24.88784
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.35461
+      value: 1.0460399
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.76
+      value: -28.32
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3999997
+      value: 1.0999998
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028484, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_Follow

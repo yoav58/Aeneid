@@ -19,7 +19,13 @@ public class ItemLoader : MonoBehaviour
     {
         
     }
-
+    
+    
+    /*****************************************************
+     * Function Name: LoatAllItems
+     * Description: for each item check if its exists
+     * in memory.
+     ****************************************************/
     public void loadAllItems()
     {
         foreach (var s in itemsPossible)

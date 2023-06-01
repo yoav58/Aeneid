@@ -40,11 +40,7 @@ public class StoreItem : MonoBehaviour
 
     public void CostDiscount(int divider)
     {
-        Debug.Log("current Price" + itemCost.ToString());
         itemCost = itemCost / divider;
-        Debug.Log("after disscount " + itemCost.ToString());
-        Debug.Log("text before " + itemCostText.text);
         itemCostText.text = itemCost.ToString();
-        Debug.Log("Text after" + itemCostText.text );
     }
 }

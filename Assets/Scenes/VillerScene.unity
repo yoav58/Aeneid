@@ -3476,6 +3476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554353973089283465, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1554353973089283469, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: TeleportTarget
       value: 
@@ -3548,6 +3552,10 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1571437499}
+    - target: {fileID: 8492618861356056267, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
 --- !u!114 &295025795 stripped

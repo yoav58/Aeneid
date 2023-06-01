@@ -44,7 +44,7 @@ public class PlayerInput : MonoBehaviour
        
     }
 
-    /* the upcoming methods if to ivoke all the events we created for input situations.
+    /* the upcoming methods if to invoke all the events we created for input situations.
      * those methods will used in update function to check every time the user enter a input.
      */
 
@@ -95,12 +95,10 @@ public class PlayerInput : MonoBehaviour
 
     private void getFirstSkillInput()
     {
-        if (Input.GetKeyDown(firstSkill))
+        if (Input.GetKeyDown(firstSkill) && !skm.skills[0].isCoolDown())
         {
-            Debug.Log("pressed Skill");
             if (!agentAnimation.doingSkill())
             {
-                Debug.Log("doing Skill");
                 skm.currentSkill(0);
                 onSkillCast?.Invoke();
             }
@@ -109,7 +107,7 @@ public class PlayerInput : MonoBehaviour
     
     private void getSecondSkillInput()
     {
-        if (Input.GetKeyDown(secondSkill))
+        if (Input.GetKeyDown(secondSkill) && !skm.skills[1].isCoolDown())
             if(!agentAnimation.doingSkill())
             {
                 skm.currentSkill(1);

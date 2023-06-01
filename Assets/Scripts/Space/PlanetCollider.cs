@@ -54,7 +54,6 @@ public class PlanetCollider : MonoBehaviour
             Debug.Log(code);
             if (!PlayerPrefs.HasKey(code)) return true;
         }
-        Debug.Log("found");
         return false;
 
     }

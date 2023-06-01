@@ -218,7 +218,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &814523 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -1150,7 +1150,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &92493586 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -1797,19 +1797,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.006348
+      value: -22.763794
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772346475096, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3254399
+      value: 1.3259699
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.463348
+      value: -22.763336
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028483, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.80000013
+      value: 0.76000017
       objectReference: {fileID: 0}
     - target: {fileID: 4633362772416028484, guid: 426bae2abb46b4d62bf8f76d82871af9, type: 3}
       propertyPath: m_Follow
@@ -6423,7 +6423,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &551882708 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -14201,7 +14201,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1156972159 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -16175,7 +16175,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &1300139049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17774,7 +17774,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1388586888 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -18222,7 +18222,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1415665866 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -19421,7 +19421,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1530079059 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -19728,7 +19728,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &1554272450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20788,7 +20788,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1601108659 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -24532,6 +24532,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554353973089283465, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492618860170516634, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 1878922591}
     - target: {fileID: 8492618860170516639, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: animationManager
       value: 
@@ -24554,11 +24562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -512.45
+      value: -509.75
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.27
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24592,6 +24600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8492618861034774651, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1878922591}
     - target: {fileID: 8492618861034774653, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: slider
       value: 
@@ -24600,8 +24612,17 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1944448219}
+    - target: {fileID: 8492618861356056267, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+--- !u!212 &1878922591 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8492618860369893302, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+  m_PrefabInstance: {fileID: 1878922590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1879310628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3170583332105222771, guid: ef117020d74e94733932ddc9de6236a1, type: 3}
@@ -24697,7 +24718,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1879310634 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2253407521734447948, guid: ef117020d74e94733932ddc9de6236a1, type: 3}

@@ -13873,7 +13873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447673754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.92, y: 1.4499998, z: -10}
+  m_LocalPosition: {x: -22.089998, y: 1.2799999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15747,7 +15747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.92, y: 1.4499998, z: -10}
+  m_LocalPosition: {x: -22.089998, y: 1.2799999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44376,10 +44376,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554353973089283465, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1554353973089283469, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: TeleportTarget
       value: 
       objectReference: {fileID: 389519642}
+    - target: {fileID: 8492618860170516634, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 1659013147}
     - target: {fileID: 8492618860170516639, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: animationManager
       value: 
@@ -44402,11 +44410,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.29
+      value: -42.46
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.71
+      value: -1.88
       objectReference: {fileID: 0}
     - target: {fileID: 8492618860853146953, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -44448,6 +44456,10 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1571437499}
+    - target: {fileID: 8492618861356056267, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
 --- !u!114 &1659013143 stripped
@@ -44488,6 +44500,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a28e28767a9c445eb5867afef0cbc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1659013147 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8492618860369893302, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+  m_PrefabInstance: {fileID: 1659013142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1659013149 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8492618861034774653, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}

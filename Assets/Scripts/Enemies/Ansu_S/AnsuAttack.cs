@@ -81,7 +81,6 @@ public class AnsuAttack : MonoBehaviour
     {
         if (PlayerInSight())
         {
-            Debug.Log("insight");
             healthManager.reduceHealth(damage);
         }
     }

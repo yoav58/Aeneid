@@ -12,7 +12,11 @@ public class ScrollColider : MonoBehaviour
     {
         if (col.tag == "Player") pickedUp();
     }
-
+    /**************************************************************
+     * Function Name: PickedUp
+     * Description: when the player get the scroll, update in the
+     * memory.
+     *************************************************************/
     private void pickedUp()
     {
         PlayerPrefs.SetInt("Scroll",1);

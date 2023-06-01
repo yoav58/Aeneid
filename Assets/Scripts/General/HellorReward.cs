@@ -17,12 +17,15 @@ public class HellorReward : Reward
     {
         
     }
-
+    /*****************************************************
+     * Function Name: GetReward
+     * Description: save in memory that the player received
+     * hellor reward.
+     ****************************************************/
     public override void GetReward()
     {
         if (PlayerPrefs.GetInt(rewardName) == 1) return;
         //items.CostDiscount(2);
         PlayerPrefs.SetInt(rewardName,1);
-        Debug.Log("get reward");
     }
 }

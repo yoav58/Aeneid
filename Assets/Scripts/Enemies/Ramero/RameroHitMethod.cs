@@ -36,7 +36,7 @@ public class RameroHitMethod : EnemyMethods, IEnemyDamage
 
     public virtual void hitTheEnemy(float damage)
     {
-        if(!isInDefence){
+        if(!isInDefence){ 
         anim.SetTrigger("getHit");
         damage = damage * ( (100-Defence) / 100);
         lifeBar.reduceLife(damage);

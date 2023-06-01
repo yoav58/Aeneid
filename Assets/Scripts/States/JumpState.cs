@@ -10,8 +10,11 @@ public class JumpState : WalkState
     [Range(0, 20)]
     public float jumperPhysicsForce = 2;
     private bool Jumping;
+    public SpriteRenderer playerSprite;
+
     protected override void EnterState()
     {
+        playerSprite.color = Color.white;
         agent.agentAnimation.playAnimation(AnimationType.Jump);
         movmentData.currentVelocity = agent.rb2d.velocity;
         movmentData.currentVelocity.y = JumpForce;
@@ -29,7 +32,7 @@ public class JumpState : WalkState
     }
     /**********************************************************************
    * Method Name: stateUpdate
-   * description: here we calcula
+   * description: here we calculate the jump force 
    ***********************************************************************/
     public override void stateUpdate()
     {

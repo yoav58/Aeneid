@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene("FirensPlanetScene");
+        SceneManager.LoadScene("GuidePlayer1Scene");
     }
     // Start is called before the first frame update
 

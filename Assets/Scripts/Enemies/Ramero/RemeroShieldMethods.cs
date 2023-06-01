@@ -18,7 +18,6 @@ public class RemeroShieldMethods : MonoBehaviour
         {
             bool deffentOrNot = (Random.value >= 0.5f);
             rhm.setIsDefence(deffentOrNot);
-            Debug.Log(deffentOrNot);
             if (deffentOrNot)
             {
                 anim.SetTrigger("Shield");

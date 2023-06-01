@@ -18,6 +18,7 @@ public class Agent : MonoBehaviour
     // to see if the player dasing
     public HelperStateCheck helper;
     public GroundDetector groundDetector;
+
     //public SkillsManager skillManager;
 
 

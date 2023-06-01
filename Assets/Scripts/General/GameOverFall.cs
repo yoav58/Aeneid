@@ -15,5 +15,7 @@ public class GameOverFall : MonoBehaviour
         {
             gom.showGameOver();
         }
+        
+        if(col.tag == "Enemy"){Destroy(col.transform.parent.gameObject);} 
     }
 }
