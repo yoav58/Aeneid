@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
 
-    public void playGame()
+    public void playGameFromStart()
     {
         SceneManager.LoadScene("GuidePlayer1Scene");
+    }
+
+    public void playGame()
+    {
+        SceneManager.LoadScene("FirensPlanetScene");
+
     }
     // Start is called before the first frame update
 
@@ -17,7 +23,7 @@ public class MainMenuScript : MonoBehaviour
     public void newGame()
     {
         PlayerPrefs.DeleteAll();
-        playGame();
+        playGameFromStart();
     }
 
     public void loadGame()

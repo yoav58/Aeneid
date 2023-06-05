@@ -72,4 +72,9 @@ public class PauseMenu : MonoBehaviour
         StatsMenu.SetActive(false);
         pauseMenuUI.SetActive(true);
     }
+
+    public void quitTheGame()
+    {
+        Application.Quit();
+    }
 }

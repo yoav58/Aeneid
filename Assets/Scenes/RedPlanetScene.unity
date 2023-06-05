@@ -15445,6 +15445,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1161810150}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: quitTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: code
       value: 3

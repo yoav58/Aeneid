@@ -20341,6 +20341,10 @@ PrefabInstance:
       propertyPath: m_xp
       value: 
       objectReference: {fileID: 1280582807}
+    - target: {fileID: 8662645247404266119, guid: 8419f539c78ac436caac41787681317d, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 1525681549}
     - target: {fileID: 8662645248634533078, guid: 8419f539c78ac436caac41787681317d, type: 3}
       propertyPath: cooldown
       value: 2
@@ -20355,6 +20359,11 @@ Transform:
 --- !u!4 &1525681548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8662645246990090068, guid: 8419f539c78ac436caac41787681317d, type: 3}
+  m_PrefabInstance: {fileID: 1525681546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1525681549 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8662645247204892075, guid: 8419f539c78ac436caac41787681317d, type: 3}
   m_PrefabInstance: {fileID: 1525681546}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1525681550 stripped
@@ -22150,17 +22159,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 359bc67bf3f6f48e3a3ff8701c72c8bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1634363941 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3534360806508387270, guid: 107d1c11cf3a1455e88d8e70ab62854d, type: 3}
-  m_PrefabInstance: {fileID: 1634363939}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634363942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751190ff01ef349e69a73402a0fb22af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1634363942 stripped
@@ -25265,10 +25263,14 @@ PrefabInstance:
     - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1634363941}
+      objectReference: {fileID: 144309998}
     - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: deleteSave
+      value: quitTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: location

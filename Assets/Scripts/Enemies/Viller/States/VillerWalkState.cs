@@ -13,8 +13,14 @@ public class VillerWalkState : StateMachineBehaviour
     public float attackRang;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerPlace = GameObject.FindGameObjectsWithTag("Player")[1].transform;
-        rgd = animator.GetComponent<Rigidbody2D>();
+       playerPlace = GameObject.FindGameObjectsWithTag("Player")[0].transform;
+       if (playerPlace.name != "Agent")
+       {
+           playerPlace = playerPlace.transform.Find("Agent").transform;
+       }
+        //playerPlace = GameObject.FindGameObjectWithTag("Player").transform.Find("Agent").transform;
+       // Debug.Log(playerPlace.gameObject.name);
+       rgd = animator.GetComponent<Rigidbody2D>();
         villerMethods = animator.GetComponent<VillerBoss>();
     }
 
@@ -34,5 +40,42 @@ public class VillerWalkState : StateMachineBehaviour
     {
         animator.ResetTrigger("Attack");
         animator.ResetTrigger("getHit");
+    }
+
+
+    private void checkNulls(Animator animator)
+    {
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if(playerObject != null) 
+            {
+                Transform agentTransform = playerObject.transform.Find("Agent");
+                if(agentTransform != null) 
+                {
+                    playerPlace = agentTransform;
+                    Debug.Log(playerPlace.gameObject.name);
+                }
+                else 
+                {
+                    Debug.LogError("No GameObject named 'Agent' found as a child of 'Player'.");
+                }
+            } 
+            else 
+            {
+                Debug.LogError("No GameObject with 'Player' tag found.");
+            }
+
+            rgd = animator.GetComponent<Rigidbody2D>();
+            if(rgd == null) 
+            {
+                Debug.LogError("No Rigidbody2D component found on this GameObject.");
+            }
+
+            villerMethods = animator.GetComponent<VillerBoss>();
+            if(villerMethods == null) 
+            {
+                Debug.LogError("No VillerBoss component found on this GameObject.");
+            }
+        }
     }
 }

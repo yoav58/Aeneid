@@ -57,4 +57,18 @@ public class JumpState : WalkState
             agent.rb2d.velocity = movmentData.currentVelocity;
         }
     }
+
+    public override void exit()
+    {
+        OnExit.Invoke();
+        ExitState();
+    }
+
+    public override void Enter()
+    {
+        agent.agentInput.OnJumpReleased += handleStopJump;
+        agent.agentInput.onSkillCast = handleSkill;
+        OnEnter?.Invoke();
+        EnterState();
+    }
 }

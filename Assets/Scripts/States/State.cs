@@ -32,7 +32,7 @@ namespace States
         * description: when we enter the state, do all the functionality we want to do.
         * and invoke all the method of our enter event.
         ***********************************************************************/
-        public void Enter()
+        public virtual void Enter()
         {
             agent.agentInput.OnMovment += handleMovement;
             agent.agentInput.OnJumpPresset += handleJump;
@@ -74,7 +74,7 @@ namespace States
 
         protected virtual void handleStopJump() { }
 
-        private  void handleSkill()
+        protected  void handleSkill()
         {
             agent.transitionToOtherState(skillState, this);
         }
@@ -108,7 +108,7 @@ namespace States
     * Method Name: exit
     * description: same as enter, but the opposite.
      ***********************************************************************/
-        public void exit()
+        public virtual void exit()
         {
             agent.agentInput.OnMovment -= handleMovement;
             OnExit.Invoke();

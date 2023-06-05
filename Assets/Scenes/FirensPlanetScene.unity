@@ -864,6 +864,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df40687b2be14696aca95b3118097fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &119207074 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8662645247204892075, guid: 8419f539c78ac436caac41787681317d, type: 3}
+  m_PrefabInstance: {fileID: 1071342785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &119968997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3865,6 +3870,10 @@ PrefabInstance:
       propertyPath: m_xp
       value: 
       objectReference: {fileID: 317142582}
+    - target: {fileID: 8662645247404266119, guid: 8419f539c78ac436caac41787681317d, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 119207074}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8419f539c78ac436caac41787681317d, type: 3}
 --- !u!4 &1071342786 stripped
@@ -4459,9 +4468,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1066406479}
-        m_TargetAssemblyTypeName: Loader, Assembly-CSharp
-        m_MethodName: deleteSave
+      - m_Target: {fileID: 1575453692}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: quitTheGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

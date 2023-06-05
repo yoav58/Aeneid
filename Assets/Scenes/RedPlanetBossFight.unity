@@ -550,6 +550,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 8492618860170516634, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 1517037496}
     - target: {fileID: 8492618860170516639, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: animationManager
       value: 
@@ -1389,6 +1393,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: GrudoMissions
   missionCount: 0
+--- !u!212 &1517037496 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8492618860369893302, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+  m_PrefabInstance: {fileID: 538247255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1594277516 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8492618861356056265, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
@@ -1491,6 +1500,18 @@ PrefabInstance:
     - target: {fileID: 22664760, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 654587018}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: quitTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: location

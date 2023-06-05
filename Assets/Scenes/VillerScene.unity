@@ -3230,6 +3230,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 288793820}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: quitTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245298103, guid: 81c883817723c444baff50af95787f26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1351451498, guid: 81c883817723c444baff50af95787f26, type: 3}
       propertyPath: location
       value: '"Red" Planet'
@@ -3484,6 +3496,10 @@ PrefabInstance:
       propertyPath: TeleportTarget
       value: 
       objectReference: {fileID: 1904872727}
+    - target: {fileID: 8492618860170516634, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 295025798}
     - target: {fileID: 8492618860170516639, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
       propertyPath: animationManager
       value: 
@@ -3591,6 +3607,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a28e28767a9c445eb5867afef0cbc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &295025798 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8492618860369893302, guid: 6b99805edc66245f4a33980f7acc206f, type: 3}
+  m_PrefabInstance: {fileID: 295025794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302337698
 GameObject:
   m_ObjectHideFlags: 0
