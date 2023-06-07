@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,6 +17,12 @@ public class StoreItem : MonoBehaviour
     public 
     // Start is called before the first frame update
     void Start()
+    {
+        //if (PlayerPrefs.GetInt(DiscountName) == 1) CostDiscount(DiscountDivider);
+        //itemCostText.text = itemCost.ToString();
+    }
+
+    private void OnEnable()
     {
         if (PlayerPrefs.GetInt(DiscountName) == 1) CostDiscount(DiscountDivider);
         itemCostText.text = itemCost.ToString();
