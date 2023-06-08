@@ -51,7 +51,6 @@ public class PlanetCollider : MonoBehaviour
     {
         foreach (var code in missionsCodes)
         {
-            Debug.Log(code);
             if (!PlayerPrefs.HasKey(code)) return true;
         }
         return false;

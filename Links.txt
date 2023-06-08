@@ -1,0 +1,14 @@
+קישורים:
+
+GitHub Link (include source file and executable for windows and mac):
+https://github.com/yoav58/Aeneid
+
+YouTube Link:
+https://www.youtube.com/watch?v=BsN3nAXSb78
+
+Jira Link:
+https://aeneid2d.atlassian.net/jira/software/projects/AEN/boards/1/roadmap
+
+Architecture File:
+https://docs.google.com/presentation/d/1XB-tkOXmQf2Lu94Nd68R3marEl67Vsjn/edit?usp=sharing&ouid=100344979193919396829&rtpof=true&sd=true
+
