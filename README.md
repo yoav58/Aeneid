@@ -1,4 +1,4 @@
-![Gameplay Image 1](https://i.ibb.co/VDkJsxH/2023-09-14-23-16-57.png)
+![Gameplay Image 1](https://i.ibb.co/KzFSXcS/Aeneid-Logo.png)
 
 
 # Aeneid
