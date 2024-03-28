@@ -1,4 +1,4 @@
-![Gameplay Image 1](https://i.ibb.co/KzFSXcS/Aeneid-Logo.png)
+<img src="https://i.postimg.cc/85ZFkK3Y/Aeneid-Logo.png" width="900" height="500">
 
 
 # Aeneid
@@ -12,7 +12,7 @@ Aeneid is a 2D RPG platform game, aiming to bring back the nostalgia of the role
 * Combat: Engage in dynamic combat using a variety of abilities and skills.
 
 
-![Gameplay Image 2](https://i.ibb.co/7Yky2gR/2023-09-14-23-28-57.png)
+![Gameplay Image 2](https://i.postimg.cc/Vkz2cKqM/Aeneid-Fight.png)
 
 
 ## Installation
